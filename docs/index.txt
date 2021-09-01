@@ -10,9 +10,17 @@ Contents:
 
 .. toctree::
    :maxdepth: 2
+   :titlesonly:
    :glob:
 
    whatiso*
+   whatisitfor*
+   archi*
+   install*
+   conf*
+   road*
+   sup*
+   dev*
 
 
 
