@@ -1,209 +1,198 @@
-#########################
-This is a sub header
-#########################
+Sphinx cheatsheet Sub-header
++++++++++++++++++
 
-This document focuses on style-guide.
-It is a kind of coding standards applied to documentation files.
-It is not about documentation content.
+A brief overview of some of the main functions of Sphinx
+as used in the aiida documentation. View :ref:`this-page` to see
+how this page was formatted. This is only a brief outline for more
+please see `the Sphinx documentation <http://sphinx-doc.org/contents.html>`_
 
 
-***************************************
-RestructuredText with Sphinx directives
-***************************************
+Main Titles and Subtitles
+-------------------------
 
-This documentation uses `Python-sphinx`_, which itself uses `reStructuredText`_
-syntax.
+This is an example of a main title.
 
+subtitles are made like this
+============================
 
-*********
-Filenames
-*********
+This is an example of a subtitle.
 
-Use only lowercase alphanumeric characters and ``-`` (minus) symbol.
+Formatting
+----------
 
-Suffix filenames with the ``.txt`` extension.
+Basic Paragraph Formatting
+==========================
 
-.. note::
+Words can be written in *italics* or in **bold**. Text describing a specific
+``computer_thing`` can be formatted as well.
 
-  Usage of ``.rst`` extension is not recommended because:
 
-  * RST files are human-readable text files. Most systems natively recognize
-    the ``.txt`` extension and open these files with a text editor. This is
-    a good choice.
+Paragraph and Indentation
+=========================
 
-  * Some programs parse ``.rst`` with `rst2html`_, which cannot interpret some
-    Sphinx's directives such as ``code-block``. So readers using such programs
-    actually lose some content.
+Much like in regular python, the indentation plays a strong role in the formatting.
 
-    As an example, well known `Github`_ platform uses rst2html
-    to render ``.rst`` files in its repository browser. Not only you lose
-    content, you also lose features like links to lines.
+For example all of this sentence will
+appear on the same line.
 
-  * When you need to read HTML builds of the documentation, best practice is to
-    export documentation as static builds with ``sphinx-build`` command, then
-    host and serve these builds as static files. For public projects, you may
-    have a look at services like `Read the docs`_.
+While this sentence will appear
+ differently because there is an indent.
 
+Terminal and Code Formatting
+============================
 
-***********
-Whitespaces
-***********
+Something to be run in command line can be formatted like this::
 
-Indentation
-===========
+ >> Some command
 
-Indent with 2 spaces.
+As can be seen above, while snippets of python on code can be done like this::
 
-Except:
+ import module
+ print('hello world')
 
-* ``toctree`` directive requires a 3 spaces indentation.
+Notes
+=====
+.. note:: Notes can be added like this.
 
-Blank lines
-===========
+Bullet Points and Lists
+=======================
 
-Two blank lines before overlined sections, i.e. before H1 and H2.
-One blank line before other sections.
-See `Headings`_ for an example.
+* Bullet points can be added
+* Just like this
+  * With sub-bullets like this
 
-One blank line to separate directives.
+#. While numerical bullets
+#. Can be added
+#. Like this
 
-.. code-block:: rst
 
-  Some text before.
+Links, Code Display, Cross References
+-------------------------------------
+External Links
+==============
+Can be done like here for `AiiDA <www.aiida.net/>`_
 
-  .. note::
+Code Download
+=============
 
-    Some note.
+Code can be downloaded like this.
 
-Exception: directives can be written without blank lines if they are only one
-line long.
+Download: :download:`this example script <devel_tutorial/sum_executable.py>`
 
-.. code-block:: rst
+Code Display
+============
 
-  .. note:: A short note.
+Can be done like this. This entire document can be seen unformated below using this method.
 
+.. literalinclude:: devel_tutorial/sum_executable.py
 
-***********
-Line length
-***********
+.. _self-reference:
 
-Limit all lines to a maximum of 79 characters.
+Math
+====
 
+Math formulas can be added as follows :math:`<g_i|`, see
+`the Sphinx documentation on math <http://sphinx-doc.org/latest/ext/math.html#module-sphinx.ext.mathbase>`_
 
-********
-Headings
-********
 
-Use the following symbols to create headings:
+Cross Reference Docs
+====================
 
-#. ``#`` with overline
-#. ``*`` with overline
-#. ``=``
-#. ``-``
-#. ``^``
-#. ``"``
+Here is an example of a reference to the :ref:`structure_tutorial` which is on *another page*
 
-As an example:
+Here is an example of a reference to something on the same page, :ref:`self-reference`
 
-.. code-block:: rst
+.. note:: References within the same document need a reference label, see `.. _self-reference:`
+          used in this section for an example. *Hidden in formatted page, can only be seen in the
+          input text.*
 
-  ##################
-  H1: document title
-  ##################
+Cross Reference Classes and Methods
+===================================
 
-  Introduction text.
+Any class can be referenced for example :py:class:`~aiida.orm.data.structure.StructureData` references the
+StructureData data class.
 
+Similarily any method can be referenced for example :py:meth:`~aiida.orm.data.structure.StructureData.append_atom`
+shows the StructureData class' append atom method.
 
-  *********
-  Sample H2
-  *********
 
-  Sample content.
+Table of Contents Docs and Code
+-------------------------------
 
+Table of Contents for Docs
+==========================
+An example of the table of contents syntax for the :ref:`git-cheatsheet` can be seen here
+note that these are especially important in the global structure of the
+document, as found in index.rst files.
 
-  **********
-  Another H2
-  **********
+.. toctree::
+   :maxdepth: 2
 
-  Sample H3
-  =========
+   git_cheatsheet
 
-  Sample H4
-  ---------
+.. note:: The `maxdepth` parameter can be used to change how deep the title indexing goes. See :ref:`this-page`.
 
-  Sample H5
-  ^^^^^^^^^
 
-  Sample H6
-  """""""""
+Table of Contents for Code
+==========================
 
-  And some text.
+Table of contents, that cross reference code, can be done very similarly to how
+it is done for documents. For example the parser docs can be indexed like this
 
-If you need more than heading level 4 (i.e. H5 or H6), then you should consider
-creating a new document.
+.. toctree::
+   :maxdepth: 1
 
-There should be only one H1 in a document.
+   aiida.orm <../apidoc/aiida.orm>
+   ../apidoc/aiida.utils
 
-.. note::
 
-  See also `Sphinx's documentation about sections`_.
+Automodules Example
+====================
 
+.. toctree::
+   :maxdepth: 2
 
-***********
-Code blocks
-***********
+.. automodule:: aiida.common.datastructures
+   :members:
+   :noindex:
 
-Use the ``code-block`` directive **and** specify the programming language. As
-an example:
+.. note:: A `:noindex:` directive was added to avoid duplicate object
+          description for this example. Do not put the keyword in a real
+          documentation.
 
-.. code-block:: rst
+How To Format Docstrings
+------------------------
 
-  .. code-block:: python
+Much of the work will be done automatically by Sphinx, just format the docstrings with the same syntax used here,
+a few extra examples of use would include::
 
-    import this
+    :param parameters: some notes on input parameters
 
+    :return returned: some note on what is returned
 
-********************
-Links and references
-********************
+    :raise Errors: Notes on warnings raised
 
-Use links and references footnotes with the ``target-notes`` directive.
-As an example:
 
-.. code-block:: rst
 
-  #############
-  Some document
-  #############
+Changing The Docs
+-----------------
 
-  Some text which includes links to `Example website`_ and many other links.
+When creating a new ``.rst`` file, please:
+the relevant ``index.rst`` tree. This can be done by:
 
-  `Example website`_ can be referenced multiple times.
+* Modify relevant doc strings or ``.rst`` files in
+  the ``/docs/source/`` folder, not in ``/docs/build`` 
 
-  (... document content...)
+* Make sure that all relevant ``.rst`` files are added
+  to relevant ``index.rst`` files (table of contents)
 
-  And at the end of the document...
+* Run ``make all`` in the ``/docs/`` folder
 
-  **********
-  References
-  **********
+* Fix warnings, if any
 
-  .. target-notes::
+.. _this-page:
 
-  .. _`Example website`: http://www.example.com/
+This Page
+=========
 
-
-**********
-References
-**********
-
-.. target-notes::
-
-.. _`Python-sphinx`: http://sphinx.pocoo.org/
-.. _`reStructuredText`: http://docutils.sourceforge.net/rst.html
-.. _`rst2html`:
-   http://docutils.sourceforge.net/docs/user/tools.html#rst2html-py
-.. _`Github`: https://github.com
-.. _`Read the docs`: http://readthedocs.org
-.. _`Sphinx's documentation about sections`:
-   http://sphinx.pocoo.org/rest.html#sections
+.. literalinclude:: sphinx_cheatsheet.rst
