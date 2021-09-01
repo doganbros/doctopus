@@ -15,6 +15,7 @@ Contents:
 
    whatiso*
    whatisitfor*
+   whatisitfor/*
    archi*
    install*
    conf*
