@@ -6,6 +6,7 @@ Octopus is an open source social media platform focusing on video content. Octop
 
 
 Octopus ties up following media solutions:
+
 * Jitsi
  * Online meetings
  * Seminars (Large rooms)
