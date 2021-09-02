@@ -2,11 +2,30 @@
 What is Octopus?
 #########################
 
-This document focuses on style-guide.
-It is a kind of coding standards applied to documentation files.
-It is not about documentation content.
+Octopus is an open source social media platform focusing on video content. Octopus orchestrates various media services such as online meetings, live streamings, on demand video delivery.
 
 
+Octopus ties up following media solutions:
+* Jitsi
+ * Online meetings
+ * Seminars (Large rooms)
+ * Stream meetings
+ * Record meetings
+
+* Nginx RTMP Servers
+ * Live and on-demand streaming
+
+* AWS 
+ * Elemental Media Services
+ * Live streaming
+ * On demand streaming
+ * Storage with S3
+ * Cloudfront
+
+
+Autoscaling & Load Balancing
+
+* Bullet points can be added
 ***************************************
 RestructuredText with Sphinx directives
 ***************************************
