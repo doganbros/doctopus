@@ -4,6 +4,14 @@ Possible Use Cases
 
 Octopus can be used as it is or customised for any kind of video based social media needs.
 
+* Item 1.
+
+  * Item a.
+
+  * Item b.
+
+* Item 2.
+
 Here are some possible use cases:
 
 * Social media platform;
