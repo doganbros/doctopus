@@ -4,14 +4,6 @@ Possible Use Cases
 
 Octopus can be used as it is or customised for any kind of video based social media needs.
 
-* Jitsi
- * Online meetings
- * Seminars (Large rooms)
- * Stream meetings
- * Record meetings
-
-* Second
-
 Here are some possible use cases:
 
 * Social media platform;
