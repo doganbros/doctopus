@@ -12,15 +12,15 @@ Contents:
    :maxdepth: 2
    :glob:
 
-   1.what_is_octopus.rst
-   2.possible_use_cases.rst
-   3.design_philosophy.rst
-   4.how_does_it_work.rst
-   5.architecture.rst
-   6.setup.rst
-   7.road_map.rst
-   8.developer_guideline.rst
-   9.contribution.rst
+   01.what_is_octopus.rst
+   02.possible_use_cases.rst
+   03.design_philosophy.rst
+   04.how_does_it_work.rst
+   05.architecture.rst
+   06.setup.rst
+   07.road_map.rst
+   08.developer_guideline.rst
+   09.contribution.rst
    10.license.rst
 
 Indices and tables
