@@ -23,10 +23,8 @@ Contents:
    09.contribution.rst
    10.license.rst
 
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. Indices and tables
+ :ref:`genindex`
+ :ref:`modindex`
+ :ref:`search`
 
