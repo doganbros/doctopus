@@ -13,15 +13,15 @@ Contents:
    :glob:
 
    1.what_is_octopus.rst
-   possible_use_cases.rst
-   design_philosophy.rst
-   how_does_it_work.rst
-   architecture.rst
-   setup.rst
-   road_map.rst
-   developer_guide.rst
-   contribution.rst
-   license.rst
+   2.possible_use_cases.rst
+   3.design_philosophy.rst
+   4.how_does_it_work.rst
+   5.architecture.rst
+   6.setup.rst
+   7.road_map.rst
+   8.developer_guide.rst
+   9.contribution.rst
+   10.license.rst
 
 Indices and tables
 ==================
