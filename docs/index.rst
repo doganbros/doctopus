@@ -17,13 +17,11 @@ Contents:
    design_philosophy.rst
    how_does_it_work.rst
    architecture.rst
-   install*
-   conf*
-   road*
-   sup*
-   dev*
-
-
+   setup.rst
+   road_map.rst
+   developer_guide.rst
+   contribution.rst
+   license.rst
 
 Indices and tables
 ==================
