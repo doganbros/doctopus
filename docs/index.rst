@@ -15,6 +15,7 @@ Contents:
    what_is_octopus.rst
    possible_use_cases.rst
    design_philosophy.rst
+   how_does_it_work.rst
    whatisitfor.txt
    archi*
    install*
