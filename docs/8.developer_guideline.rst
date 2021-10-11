@@ -1,5 +1,5 @@
 #########################
-Development Guide Line
+Developer Guideline
 #########################
 
 This document focuses on style-guide.
