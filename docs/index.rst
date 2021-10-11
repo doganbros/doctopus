@@ -10,7 +10,6 @@ Contents:
 
 .. toctree::
    :maxdepth: 2
-   :titlesonly:
    :glob:
 
    what_is_octopus.rst
