@@ -13,8 +13,9 @@ Contents:
    :titlesonly:
    :glob:
 
-   whatiso*
+   what_is_octopus.rst
    possible_use_cases.rst
+   design_philosophy.rst
    whatisitfor.txt
    archi*
    install*
