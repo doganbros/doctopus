@@ -12,7 +12,7 @@ Contents:
    :maxdepth: 2
    :glob:
 
-   1 - What is Octopus.rst
+   1.what_is_octopus.rst
    possible_use_cases.rst
    design_philosophy.rst
    how_does_it_work.rst
