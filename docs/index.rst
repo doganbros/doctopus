@@ -19,7 +19,7 @@ Contents:
    5.architecture.rst
    6.setup.rst
    7.road_map.rst
-   8.developer_guide.rst
+   8.developer_guideline.rst
    9.contribution.rst
    10.license.rst
 
