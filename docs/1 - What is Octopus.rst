@@ -2,7 +2,7 @@
 What is Octopus?
 #########################
 
-Octopus is an open source social media platform focusing on video oriented communication and content sharing. Octopus orchestrates various media services and solutions for online meetings, live streamings, on demand video delivery and many more. With an agile and hierarchical way of user interaction and content sharing possibilities, Octopus proposes a robust and flexible solution for various video communication and distribution needs.
+Octopus is an open sourced social media platform focusing on video oriented communication and content sharing. Octopus orchestrates various media services and solutions for online meetings, live streamings, on demand video delivery and many more. With an agile and hierarchical way of user interaction and content sharing possibilities, Octopus proposes a robust and flexible solution for various video communication and distribution needs.
 
 Octopus is;
 
