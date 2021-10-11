@@ -1,5 +1,5 @@
 #########################
-Configuration
+Setup
 #########################
 
 This document focuses on style-guide.
