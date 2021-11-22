@@ -143,11 +143,44 @@ Additional Scripts
 .. code-block:: bash
 
   # DATABASE COMMANDS
+  
   # run all migrations
   yarn migration:run # Even though nestjs runs this automatically when it boots up.
 
   # create new migration boilerplate
   yarn migration:create
+  
+  # LOGS
+  
+  # show logs in production
+  pm2 logs
+  
+  # TESTING
+  
+  # unit tests
+  yarn server:test
+
+  # e2e tests
+  yarn server:test:e2e
+
+  # test coverage
+  yarn server:test:cov
+  
+  # Runs the app server in the development mode.
+  yarn server:start:dev
+  
+  # Runs the app in the development mode.
+  # Open http://localhost:3000 to view it in the browser.
+  # You will also see any lint errors in the console.
+  npm start:web
+  
+  # Builds the app for production to the build folder. The build is minified and the filenames include the hashes.
+  yarn build
+  
+  # Remove the single build dependency from your project
+  yarn eject
+  
+  
   
   
   
