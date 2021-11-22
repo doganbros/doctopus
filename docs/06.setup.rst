@@ -27,6 +27,30 @@ Use the steps below to install Docker Compose
   sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
   sudo chmod +x /usr/local/bin/docker-compose
   
+ 
+***************************************
+Download Octopus from GitHub Repository
+***************************************
+
+.. code-block:: bash
+
+  sudo apt-get install git
+  git clone https://github.com/doganbros/octopus-docker.git
+  cd octopus-docker
+  
+***************************************
+Configure & Start Octopus
+***************************************
+
+Edit the ``env-example`` file included according to your setup. At this step, Jitsi will require you to have a FQDN attached to your machine. After making the 
+necessary adjustments, make a copy of the ``env-example`` named ``.env``. 
+
+Then you may use the following to bring up your docker containers.
+
+.. code-block:: bash
+
+  docker-compose up
+  
   
 ---------------
 
