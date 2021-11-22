@@ -45,7 +45,7 @@ Please follow the steps below to get a development Postgres server running. The 
 
 * Inside the docker container, run ``'CREATE DATABASE octopus'`` to create your Octopus database.
 
-* Run \q to quit from Psql and Docker container.
+* Run `\q` to quit from Psql and Docker container.
 
 -----------------
 
