@@ -23,6 +23,7 @@ Contents:
    09.developer_guideline.rst
    10.contribution.rst
    11.license.rst
+   12.FAQ.rst
 
 .. Indices and tables
  :ref:`genindex`
