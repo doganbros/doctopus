@@ -9,6 +9,7 @@ This document focuses on an easily configured development environment. In this e
 ***************************************
 Install Docker & Docker Compose
 ***************************************
+Use the steps below to install Docker
 
 .. code-block:: bash
 
@@ -19,10 +20,14 @@ Install Docker & Docker Compose
   sudo service docker start
   newgrp docker
   
+Use the steps below to install Docker Compose
 
-  .. code-block:: python
+.. code-block:: bash
 
-    import this
+  sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+  sudo chmod +x /usr/local/bin/docker-compose
+  
+  
 ---------------
 
 #########################
