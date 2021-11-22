@@ -47,6 +47,58 @@ Please follow the steps below to get a development Postgres server running. The 
 
 * Run ``\q`` to quit from Psql and Docker container.
 
+***************************************
+Setup Mattermost Server
+***************************************
+
+Please follow the steps below to get a development mattermost server running. The easiest way to use docker.
+
+* Make sure you have docker installed on your computer. If you do not have docker already on your computer, Go to `this link <https://www.docker.com/get-started/>`_, choose your platform and click download. Follow the simple steps to get docker installed on your computer.
+
+* Open your terminal (command prompt or preferably powershell on windows).
+
+* Enter the command `docker run --name mattermost-preview -d --publish 8065:8065 --add-host dockerhost:127.0.0.1 mattermost/mattermost-preview`. If you want 
+to change the port where mattermost runs by default, replace `<port>:8065` by your prefered port while typing the command.
+
+* Wait for some few minutes for the mattermost server to bootup.
+
+* To view the logs enter the command `docker logs mattermost-preview --follow`.
+
+* You can run multiple instances by just changing the port of your host like above.
+
+* Launch mattermost on your browser by visiting `http://localhost:8065 <http://localhost:8065>`_  or the port that you used above.
+
+* Type in the system administrator's email, username and password. Note that you are supposed to use a username and email different from your account in octopus. This is because octopus will try to create an account for you when you setup everything up.
+
+* You will be asked to create a new team. Create a new team called octopus.
+
+* You will be signed in to the dashboard of mattermost.
+
+* Press the 9 squares menu icon (similiar to grid view icon) on the top left corner. Then click `System Console`.
+
+* Search for `Integration Management`.
+
+* Under `Integration Management`, scroll to the bottom and set `Enable Personal Access Tokens` to `true`.
+
+* Search for `Bot Accounts`.
+
+* `Under Bot Accounts`, set `Enable Bot Account Creation` to `true`.
+
+* Now click the hamburger menu on the top left and click `Switch to octopus`.
+
+* Press the 9 squares menu icon on the top left corner again and then click `Integrations`.
+
+* Click `Bot Accounts` and the `Add Bot Account` at the top right of the screen.
+
+* Create a bot with the username octopus-bot. Type in any display name of your choice (Optional). Type in a description (Optional) and select System Admin as the role. Then Click `Create Bot Account`.
+
+* You will get a setup successful prompt when everything went well. You will also be provided with a token. Please save this token at a secure place because this will be the token octopus will be using to login as the bot.
+
+* Make sure you update all your environment variables for octopus.
+
+* You can find examples at the .env.example file. `REACT_APP_MM_SERVER_URL`, `MM_SERVER_URL`, `MM_BOT_TOKEN`. The `MM_BOT_TOKEN` is the token you received while creating a bot account.
+
+* If you already had a valid session at octopus please logout and login again.
 -----------------
 
 This document focuses on style-guide.
