@@ -1,3 +1,29 @@
+
+#########################
+Quick Setup
+#########################
+
+This document focuses on an easily configured development environment. In this environment, Octopus, Mattermost, RTMP servers and Jitsi each run in their own containers. An FQDN will be required.
+
+
+***************************************
+Install Docker & Docker Compose
+***************************************
+
+.. code-block:: bash
+  sudo apt-get update
+  sudo apt-get install wget
+  wget -qO- https://get.docker.com/ | sh
+  sudo usermod -aG docker <username>
+  sudo service docker start
+  newgrp docker
+  
+
+  .. code-block:: python
+
+    import this
+---------------
+
 #########################
 Setup
 #########################
