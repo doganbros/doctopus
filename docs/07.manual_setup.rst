@@ -98,13 +98,69 @@ Please follow the steps below to get a development mattermost server running. Th
 * You can find examples at the .env.example file. ``REACT_APP_MM_SERVER_URL``, ``MM_SERVER_URL``, ``MM_BOT_TOKEN``. The ``MM_BOT_TOKEN`` is the token you received while creating a bot account.
 
 * If you already had a valid session at octopus please logout and login again.
+
+***************************************
+Set Environment Variables Into .env File
+***************************************
+
+You may configyre the environment by making a copy of the boilerplate provided.
+
+.. code-block:: bash
+
+  cp .env.example .env # Then make changes to the boilerplate provided
+
+***************************************
+Seting Web Server and Routing
+***************************************
+
+If Octopus is installed on your local you will need to add following line to your hosts file. On Unix based systems including MacOS hosts file is ``/etc/hosts`` where as on Windows it is ``C:\windows\system32\drivers\etc\hosts``.
+
+.. code-block:: bash
+
+  127.0.0.1	octopus.localhost
+  
+***************************************
+Running the Project
+***************************************
+ 
+.. code-block:: bash
+
+  yarn server:start:dev # Runs backend side in dev mode
+  yarn start:server # Runs backend in production
+  yarn start:web # Runs frontend side
+  
+
 -----------------
 
 This document focuses on style-guide.
 It is a kind of coding standards applied to documentation files.
 It is not about documentation content.
 
+***************************************
+Additional Scripts
+***************************************
 
+.. code-block:: bash
+
+  # DATABASE COMMANDS
+  # run all migrations
+  yarn migration:run # Even though nestjs runs this automatically when it boots up.
+
+  # create new migration boilerplate
+  yarn migration:create
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 ***************************************
 RestructuredText with Sphinx directives
 ***************************************
