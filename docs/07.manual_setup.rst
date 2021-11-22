@@ -8,11 +8,11 @@ Requirements
 
 * `Node.js <https://nodejs.org/en/download/>`_ 
 
-* `Node.js <https://nodejs.org/en/download/>`_ 
+* `Yarn <https://yarnpkg.com/en/docs/install>`_ 
 
-* `Node.js <https://nodejs.org/en/download/>`_ 
+* `NestCli <https://docs.nestjs.com/cli/overview>`_ 
 
-* `Node.js <https://nodejs.org/en/download/>`_ 
+* `Postgres <https://www.postgresql.org/>`_ 
 
 
 
