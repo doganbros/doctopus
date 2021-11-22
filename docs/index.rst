@@ -17,11 +17,12 @@ Contents:
    03.design_philosophy.rst
    04.how_does_it_work.rst
    05.architecture.rst
-   06.setup.rst
-   07.road_map.rst
-   08.developer_guideline.rst
-   09.contribution.rst
-   10.license.rst
+   06.quick_setup.rst
+   07.manual_setup.rst
+   08.road_map.rst
+   09.developer_guideline.rst
+   10.contribution.rst
+   11.license.rst
 
 .. Indices and tables
  :ref:`genindex`
