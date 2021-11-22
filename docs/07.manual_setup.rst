@@ -33,9 +33,9 @@ Install dependencies with
 Create Postgres Database
 ***************************************
 
-Please follow the steps below to get a development Postgres server running. The easiest way to use `docker <https://www.docker.com/>`. If you have running Postgres database server you can skip these steps and simply create an Octopus database.
+Please follow the steps below to get a development Postgres server running. The easiest way to use `docker <https://www.docker.com/>`_. If you have running Postgres database server you can skip these steps and simply create an Octopus database.
 
-* Make sure you have docker installed on your computer. If you do not have docker already on your computer, Go to `this link <https://www.docker.com/get-started/>`, choose your platform and click download. Follow the simple steps to get docker installed on your computer.
+* Make sure you have docker installed on your computer. If you do not have docker already on your computer, Go to `this link <https://www.docker.com/get-started/>`_, choose your platform and click download. Follow the simple steps to get docker installed on your computer.
 
 * Open your terminal (command prompt or preferably powershell on windows).
 
