@@ -45,7 +45,9 @@ If you'd like to learn more about us, you can visit our website.
    09.developer_guideline.rst
    10.contribution.rst
    11.license.rst
-   12.FAQ.rst
+   12.third_party.rst
+   13.support.rst
+   14.FAQ.rst
 
 .. Indices and tables
  :ref:`genindex`
