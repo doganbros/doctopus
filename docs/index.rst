@@ -26,6 +26,7 @@ If this document does not answer your questions, you can check out FAQs, or join
 * `Community <https://community.octopus.doganbros>`_
 
 If you'd like to learn more about us, you can visit our website.
+
 * `doganbros.com <https://doganbros.com>`_
 
 .. toctree::
