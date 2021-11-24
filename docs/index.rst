@@ -7,9 +7,11 @@ Octopus Overview
 ================
 
 Octopus is an open-source platform that brings together many different solutions, to create a space focused on video-oriented communication and content sharing. If you are interested in hearing more, you can continue with the page below;
+
 * `What is Octopus? <https://docs.octopus.doganbros.com/en/latest/01.what_is_octopus.html>`_
 
 If you'd like to give it a go yourself, you can try our Quick Setup guide in the page below, of if you are a developer, you can use Manual Setup.
+
 * `Quick Start <https://docs.octopus.doganbros.com/en/latest/06.quick_setup.html>`_
 * `What is Octopus? <https://docs.octopus.doganbros.com/en/latest/07.manual_setup.html>`_
 
