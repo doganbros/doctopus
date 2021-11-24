@@ -11,6 +11,7 @@ Contents:
 .. toctree::
    :maxdepth: 2
    :glob:
+   :hidden:
 
    01.what_is_octopus.rst
    02.possible_use_cases.rst
