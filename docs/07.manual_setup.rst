@@ -30,8 +30,11 @@ Install dependencies with
   yarn install
 
 ***************************************
-Create Postgres Database
+Setting up Octopus
 ***************************************
+
+Create Postgres Database
+========================
 
 Please follow the steps below to get a development Postgres server running. The easiest way to use `docker <https://www.docker.com/>`_. If you have running Postgres database server you can skip these steps and simply create an Octopus database.
 
