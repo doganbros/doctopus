@@ -389,7 +389,7 @@ First you must create a script for RTMP server to communicate with Octopus. Crea
 
   DATE="$(date)"
   source token.txt
-  source environ.txt
+  source octopus.conf
   EVENT_TYPE=$1
   TEMP_ID=$2
   USER_ID=$(cut -d "=" -f2-<<< $TEMP_ID)
@@ -496,11 +496,96 @@ First you must create a script for RTMP server to communicate with Octopus. Crea
    fi
   fi
 
+Define Environment Variables
+============================
+
+The script above requires a configuration file. Create a file named ``/home/octopus/octopus.conf`` and populate it;
+
+.. code-block:: bash
+
+  OCTOPUS_URL=$YOUR_END_POINT
+  API_KEY=$YOUR_API_KEY
+  API_SECRET=$YOUR_API_SECRET
+
 Configure Nginx
 ===============
 
+Once the script is setup, you must configure streaming applications in ``nginx.conf``. Below is the default example.
 
 .. code-block:: bash
+
+  events {
+      worker_connections  1024;
+  }
+
+  rtmp {
+      server {
+          listen 1935;
+          application live {
+              live on;
+              dash on;
+              dash_path /tmp/dash;
+              dash_fragment 15s;
+              exec_play /path/to/octopus.sh play_started $args $pageurl $name;
+              exec_play_done /path/to/octopus.sh play_done $args $pageurl $name;
+              exec_publish /path/to/octopus.sh publish_started $args $pageurl $name;
+              exec_publish_done /path/to/octopus.sh publish_done $args $pageurl $name;
+              exec_record_done /path/to/octopus.sh record_done $args $pageurl $name;
+          }
+
+          application stream-and-rec {
+              live on;
+              record all;
+              record_path /home/recordings/;
+              record_suffix -%d-%b-%y-%T.flv;
+              dash on;
+              dash_fragment 15s;
+              exec_play /path/to/octopus.sh play_started $args $pageurl $name $arg_uid;
+              exec_play_done /path/to/octopus.sh play_done $args $pageurl $name $arg_uid;
+              exec_publish /path/to/octopus.sh publish_started $args $pageurl $name $arg_uid;
+              exec_publish_done /path/to/octopus.sh publish_done $args $pageurl $name $arg_uid;
+              exec_record_done /path/to/octopus.sh record_done $args $pageurl $name $arg_uid;
+          }
+
+          application encoder{
+              live on;
+              notify_method get;
+              exec ffmpeg -i rtmp://localhost:1935/$app/$name -c:a aac -strict -2 -b:a 256k -c:v libx264 -x264opts bitrate=1024:vbv-maxrate=1024:vbv-bufsize=1024 -rtbufsize 100M -bufsize 1024k -preset veryfast -f flv rtmp://lo>;
+          }
+
+          application hls{
+              live on;
+              hls on;
+              hls_path /home/hls;
+              hls_nested on;
+              hls_fragment 2s;
+              exec_play /path/to/octopus.sh play_started $args $pageurl $name $arg_uid;
+              exec_play_done /path/to/octopus.sh play_done $args $pageurl $name $arg_uid;
+              exec_publish /path/to/octopus.sh publish_started $args $pageurl $name $arg_uid;
+              exec_publish_done /path/to/octopus.sh publish_done $args $pageurl $name $arg_uid;
+              exec_record_done /path/to/octopus.sh record_done $args $pageurl $name $arg_uid;
+          }
+      }
+  }
+
+  http {
+      server {
+          listen 80;
+          location /tv {
+              root /tmp/dash;
+          }
+      }
+
+      types {
+          text/html html;
+          application/dash+xml mpd;
+      }
+  }
+  
+******************
+Setting Up Octopus
+******************
+
 Create Postgres Database
 ========================
 
@@ -538,7 +623,7 @@ If Octopus is installed on your local you will need to add following line to you
   127.0.0.1	octopus.localhost
   
 ***************************************
-Running the Project
+Running Octopus
 ***************************************
  
 .. code-block:: bash
@@ -546,65 +631,3 @@ Running the Project
   yarn server:start:dev # Runs backend side in dev mode
   yarn start:server # Runs backend in production
   yarn start:web # Runs frontend side
-  
-
------------------
-
-This document focuses on style-guide.
-It is a kind of coding standards applied to documentation files.
-It is not about documentation content.
-
-***************************************
-Additional Scripts
-***************************************
-
-.. code-block:: bash
-
-  # DATABASE COMMANDS
-  
-  # run all migrations
-  yarn migration:run # Even though nestjs runs this automatically when it boots up.
-
-  # create new migration boilerplate
-  yarn migration:create
-  
-  # LOGS
-  
-  # show logs in production
-  pm2 logs
-  
-  # TESTING
-  
-  # unit tests
-  yarn server:test
-
-  # e2e tests
-  yarn server:test:e2e
-
-  # test coverage
-  yarn server:test:cov
-  
-  # Runs the app server in the development mode.
-  yarn server:start:dev
-  
-  # Runs the app in the development mode.
-  # Open http://localhost:3000 to view it in the browser.
-  # You will also see any lint errors in the console.
-  npm start:web
-  
-  # Builds the app for production to the build folder. 
-  # The build is minified and the filenames include the hashes.
-  yarn build
-  
-  # Remove the single build dependency from your project
-  yarn eject
-  
-.. note::
-
-  **This is a one-way operation. Once you** ``eject`` **you can't go back!**
-
-  If you aren’t satisfied with the build tool and configuration choices, you can ``eject`` at any time. This command will remove the single build dependency from your project.
-
-  Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your   project so you have full control over them. All of the commands except ``eject`` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-  You don’t have to ever use ``eject``. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
