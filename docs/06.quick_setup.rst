@@ -9,24 +9,10 @@ This document focuses on an easily configured development environment. In this e
 ***************************************
 Install Docker & Docker Compose
 ***************************************
-Use the steps below to install Docker
 
-.. code-block:: bash
-
-  sudo apt-get update
-  sudo apt-get install wget
-  wget -qO- https://get.docker.com/ | sh
-  sudo usermod -aG docker <username>
-  sudo service docker start
-  newgrp docker
+Since all the components will be running in containers, you will need Docker and Docker Compose. You may install Docker by following the guide in `this link <https://docs.docker.com/engine/install/>`_.
   
-Use the steps below to install Docker Compose
-
-.. code-block:: bash
-
-  sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-  sudo chmod +x /usr/local/bin/docker-compose
-  
+You can follow `this link <https://docs.docker.com/compose/install/>`_ to install Docker Compose.
  
 ***************************************
 Download Octopus from GitHub Repository
@@ -42,10 +28,8 @@ Download Octopus from GitHub Repository
 Configure & Start Octopus
 ***************************************
 
-Edit the ``env-example`` file included according to your setup. At this step, Jitsi will require you to have a FQDN attached to your machine. After making the 
-necessary adjustments, make a copy of the ``env-example`` named ``.env``. 
-
-Then you may use the following to bring up your docker containers.
+Make a copy of the ``env-example`` named ``.env``. After making the 
+necessary adjustments in the ``.env`` file, you may use the following to bring up your docker containers. This ``.env`` contains environment variables for `Jitsi <https://jitsi.github.io/handbook/docs/devops-guide/devops-guide-docker#configuration>`_ as well as `Octopus <https://jitsi.github.io/handbook/docs/devops-guide/devops-guide-docker#configuration>`_. You may find help in the respective links.
 
 .. code-block:: bash
 
