@@ -102,6 +102,7 @@ Once the Jitsi is installed, create a lua file named ``mod_octopus.lua``
 Populate the lua file with the following
 
 .. code-block:: lua
+
   local json = require 'util.json'
   local jid = require("util.jid")
   local http = require "net.http";
