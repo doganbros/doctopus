@@ -350,6 +350,28 @@ Populate the lua file with the following
   module:hook("muc-room-created", room_created, 153);
   module:hook("muc-room-destroyed", room_destroyed, 154);
 
+
+Configuring Prosody
+===================
+
+Configure ``/etc/prosody/conf.d/your.domain.com.cfg.lua`` by adding octopus to the list of enabled modules of the conference component like below;
+
+.. code-block:: lua
+
+  Component "conference.meet.doganbros.com" "muc"
+      restrict_room_creation = true
+      storage = "memory"
+      modules_enabled = {
+          "muc_meeting_id";
+          "muc_domain_mapper";
+          "polls";
+          "octopus";
+          "token_verification";
+      }
+      admins = { "focus@auth.meet.doganbros.com" }
+      muc_room_locking = false
+      muc_room_default_public_jids = true
+
 ***************************************
 Setting up Octopus
 ***************************************
