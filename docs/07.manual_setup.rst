@@ -88,7 +88,7 @@ Setting up Jitsi
 Installing Jitsi with JWT support
 =================================
 
-Octopus mmakes use of Jitsi for video streaming and live meeting purposes. It requires a Jitsi installation with JWT token support. You can refer to `this document <https://doganbros.com/index.php/jitsi/jitsi-installation-with-jwt-support-on-ubuntu-18-04-lts/>`_ to install Jitsi.
+Octopus mmakes use of Jitsi for video streaming and live meeting purposes. It requires a Jitsi installation with JWT token support. You can refer to `this document <https://doganbros.com/index.php/jitsi/jitsi-installation-with-jwt-support-on-ubuntu-18-04-lts/>`_ by us to install Jitsi.
 
 Installing the mod_octopus.lua Module
 =====================================
