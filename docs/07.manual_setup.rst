@@ -129,7 +129,38 @@ Configuring Prosody
       admins = { "focus@auth.meet.doganbros.com" }
       muc_room_locking = false
       muc_room_default_public_jids = true
+      
+Installing Jibri
+================
 
+To install Jibri you can follow `this tutorial <https://community.jitsi.org/t/tutorial-how-to-install-the-new-jibri/88861>`_.
+
+Customizing the Finalize Scripts
+================================
+
+* Find the following in your /etc/jitsi/jibri/jibri.conf file, and replace path with /srv/finalize/octopus-finalize.sh
+
+.. code-block:: lua
+
+  jibri {
+      recording {
+          finalize-script = <path>
+      }
+  }
+
+* Clone the repository below, and copy the included finalize.sh file to your finalize script directory.
+
+.. code-block:: bash
+
+  git clone https://github.com/doganbros/placeholder-repo &&
+  cd placeholder-repo &&
+  cp {octopus-finalize.conf, octopus-finalize.sh} /srv/finalize
+
+* Edit /srv/finalize/octopus-finalize.conf accordingly, and restart Jibri.
+
+.. code-block:: bash
+  systemctl restart jibri
+  
 ***************************************
 Setting up the RTMP servers
 ***************************************
