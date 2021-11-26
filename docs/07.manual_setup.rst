@@ -101,14 +101,34 @@ Installing the mod_octopus.lua Module
   
 * Copy the contents of the downloaded folder into ``/usr/share/jitsi-meet/prosody-plugins``.
 
-* Edit your prosody configuration at ``/etc/prosody/conf.d/your.domain.com.cfg.lua``, and add the following lines.
+Configuring Prosody
+===================
 
+* Edit your prosody configuration at ``/etc/prosody/conf.d/your.domain.com.cfg.lua``, and add the following lines.
 
 .. code-block:: lua
 
   octopusApiKey = "yourAPIkey";
   octopusApiSecret =  "yourAPIsecret";
   octopusAPIBaseUrl = "https://your.baseAPI.url";
+  
+* In the same file, add octopus to the list of enabled modules of the conference component like below;
+
+.. code-block:: lua
+
+  Component "conference.meet.doganbros.com" "muc"
+      restrict_room_creation = true
+      storage = "memory"
+      modules_enabled = {
+          "muc_meeting_id";
+          "muc_domain_mapper";
+          "polls";
+          "octopus";
+          "token_verification";
+      }
+      admins = { "focus@auth.meet.doganbros.com" }
+      muc_room_locking = false
+      muc_room_default_public_jids = true
 
 ***************************************
 Setting up the RTMP servers
