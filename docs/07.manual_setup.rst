@@ -91,7 +91,7 @@ Installing Jitsi with JWT support
 Octopus mmakes use of Jitsi for video streaming and live meeting purposes. It requires a Jitsi installation with JWT token support. You can refer to `this document <https://doganbros.com/index.php/jitsi/jitsi-installation-with-jwt-support-on-ubuntu-18-04-lts/>`_ by us to install Jitsi.
 
 Installing the mod_octopus.lua Module
-=====================================
+-------------------------------------
 
 * Once the Jitsi is installed, enter the Jitsi machine and grab the repository below.
 
@@ -102,7 +102,7 @@ Installing the mod_octopus.lua Module
 * Copy the contents of the downloaded folder into ``/usr/share/jitsi-meet/prosody-plugins``.
 
 Configuring Prosody
-===================
+-------------------
 
 * Edit your prosody configuration at ``/etc/prosody/conf.d/your.domain.com.cfg.lua``, and add the following lines.
 
@@ -135,8 +135,8 @@ Installing Jibri
 
 To install Jibri you can follow `this tutorial <https://community.jitsi.org/t/tutorial-how-to-install-the-new-jibri/88861>`_.
 
-Customizing the Finalize Scripts
-================================
+Customizing the Finalize Script
+--------------------------------
 
 * Find the following in your /etc/jitsi/jibri/jibri.conf file, and replace path with /srv/finalize/octopus-finalize.sh
 
