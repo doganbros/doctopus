@@ -93,13 +93,13 @@ Octopus mmakes use of Jitsi for video streaming and live meeting purposes. It re
 Installing the mod_octopus.lua Module
 -------------------------------------
 
-* Once the Jitsi is installed, enter the Jitsi machine and grab the repository below.
+* Once the Jitsi is installed, enter the Jitsi machine and grab the repository below and copy the contents of the downloaded folder into ``/usr/share/jitsi-meet/prosody-plugins``.
 
 .. code-block:: bash
 
-  git clone https://github.com/doganbros/placeholder-repo
-  
-* Copy the contents of the downloaded folder into ``/usr/share/jitsi-meet/prosody-plugins``.
+  git clone https://github.com/doganbros/placeholder-repo &&
+  cd placeholder-repo
+  cp mod_octopus.lua /usr/share/jitsi-meet/prosody-plugins
 
 Configuring Prosody
 -------------------
