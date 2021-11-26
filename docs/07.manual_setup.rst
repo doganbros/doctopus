@@ -2,32 +2,9 @@
 Manual Setup
 #########################
 
-***************************************
-Requirements
-***************************************
+Manual Setup installs each component individually to maximize control and configurability. All components can be installed into a single machine, provided the machine has an FQDN, and is strong enough to meet the requirements.
 
-* `Node.js <https://nodejs.org/en/download/>`_ 
 
-* `Yarn <https://yarnpkg.com/en/docs/install>`_ 
-
-* `NestCli <https://docs.nestjs.com/cli/overview>`_ 
-
-* `Postgres <https://www.postgresql.org/>`_ 
-
-***************************************
-Getting Started
-***************************************
-
-.. code-block:: bash
-
-  git clone https://github.com/doganbros/octopus # Clone Repository
-  cd octopus
-
-Install dependencies with
-
-.. code-block:: bash
-
-  yarn install
 
 *********************
 Setting up Mattermost
@@ -191,6 +168,32 @@ Create Octopus Script
 Setting Up Octopus
 ******************
 
+Requirements
+============
+
+* `Node.js <https://nodejs.org/en/download/>`_ 
+
+* `Yarn <https://yarnpkg.com/en/docs/install>`_ 
+
+* `NestCli <https://docs.nestjs.com/cli/overview>`_ 
+
+* `Postgres <https://www.postgresql.org/>`_ 
+
+
+Getting Started
+===============
+
+.. code-block:: bash
+
+  git clone https://github.com/doganbros/octopus # Clone Repository
+  cd octopus
+
+Install dependencies with
+
+.. code-block:: bash
+
+  yarn install
+  
 Create Postgres Database
 ========================
 
@@ -217,16 +220,6 @@ You may configure the environment by making a copy of the boilerplate provided.
 
   cp .env.example .env # Then make changes to the boilerplate provided
 
-
-Seting Web Server and Routing
-======================================
-
-If Octopus is installed on your local you will need to add following line to your hosts file. On Unix based systems including MacOS hosts file is ``/etc/hosts`` where as on Windows it is ``C:\windows\system32\drivers\etc\hosts``.
-
-.. code-block:: bash
-
-  127.0.0.1	octopus.localhost
-  
 ***************************************
 Running Octopus
 ***************************************
