@@ -21,17 +21,42 @@ Download Octopus from GitHub Repository
 .. code-block:: bash
 
   sudo apt-get install git
-  git clone https://github.com/doganbros/octopus-docker.git
+  git clone https://github.com/doganbros/octopus.git
   cd octopus-docker
   
 ***************************************
-Configure & Start Octopus
+Configure Octopus
 ***************************************
 
-Make a copy of the ``env-example`` named ``.env``. After making the 
-necessary adjustments in the ``.env`` file, you may use the following to bring up your docker containers. This ``.env`` contains environment variables for `Jitsi <https://jitsi.github.io/handbook/docs/devops-guide/devops-guide-docker#configuration>`_ as well as `Octopus <https://jitsi.github.io/handbook/docs/devops-guide/devops-guide-docker#configuration>`_. You may find help in the respective links.
+Make a copy of the ``.env.example`` named ``.env``. This ``.env`` contains environment variables for `Jitsi <https://jitsi.github.io/handbook/docs/devops-guide/devops-guide-docker#configuration>`_ as well as `Octopus <https://jitsi.github.io/handbook/docs/devops-guide/devops-guide-docker#configuration>`_. You may find help in the respective links.
+
+
+***************************************
+Generate SSL Certificates
+***************************************
+
+SSL certificates are required for jitsi and octopus to work correctly. If you have ssl certificates already, copy them to ``./docker/ssl`` directory. The ``fullchain`` certificate should be named as ``cert.crt`` where as the ``private`` certificate should be named as ``cert.key``.
+
+If you do not have SSL certicates already, run the script below to obtain one.
+
+.. code-block:: bash
+
+  ./docker/ssl-gen.sh
+
+
+***************************************
+Generate Strong Passwords
+***************************************
+To generate secured and strong passwords for octopus and jitsi, run the script below.
+
+.. code-block:: bash
+
+  ./gen-passwords.sh
+ 
+***************************************
+Start Octopus
+***************************************
 
 .. code-block:: bash
 
   docker-compose up
-  
