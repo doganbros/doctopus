@@ -59,4 +59,4 @@ Start Octopus
 
 .. code-block:: bash
 
-  docker-compose up
+  docker-compose up -d
