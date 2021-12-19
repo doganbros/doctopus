@@ -53,9 +53,9 @@ Installing the mod_octopus.lua Module
 
 .. code-block:: bash
 
-  git clone https://github.com/doganbros/placeholder-repo &&
-  cd placeholder-repo
-  cp mod_octopus.lua /usr/share/jitsi-meet/prosody-plugins
+  git clone https://github.com/doganbros/octopus.git
+  cd octopus
+  cp ./external/prosody-modules/mod_octopus.lua /usr/share/jitsi-meet/prosody-plugins
 
 Configuring Prosody
 -------------------
@@ -108,9 +108,9 @@ Customizing the Finalize Script
 
 .. code-block:: bash
 
-  git clone https://github.com/doganbros/placeholder-repo &&
-  cd placeholder-repo &&
-  cp {octopus-finalize.conf, octopus-finalize.sh} /srv/finalize
+  git clone https://github.com/doganbros/octopus
+  cd octopus
+  cp {./external/jibri/octopus-finalize.conf, octopus-finalize.sh} /srv/finalize
 
 * Edit /srv/finalize/octopus-finalize.conf accordingly, and restart Jibri.
 
@@ -130,11 +130,11 @@ Create Octopus Script
 
 .. code-block:: bash
 
-  git clone https://github.com/doganbros/placeholder-repo &&
-  cd placeholder-repo &&
+  git clone https://github.com/doganbros/octopus &&
+  cd octopus &&
   mkdir /home/octopus &&
-  cp {octopus.sh, octopus-sh.conf} /home/octopus &&
-  cp sample-nginx.conf /etc/nginx
+  cp {./external/rtmp/octopus.sh, ./external/rtmp/octopus-sh.conf} /home/octopus &&
+  cp ./external/rtmp/sample-nginx.conf /etc/nginx
 
 
 * Navigate to ``/home/octopus`` and edit the contents of ``octopus-sh.conf`` accordingly. Then restart nginx.
