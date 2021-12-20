@@ -4,7 +4,45 @@ Manual Setup
 
 Manual Setup installs each component individually to maximize control and configurability. All components can be installed into a single machine, provided the machine has an FQDN, and is strong enough to meet the requirements.
 
+******************
+Setting Up Octopus
+******************
 
+Requirements
+============
+
+* `Node.js <https://nodejs.org/en/download/>`_ (>= 10.13.0, except for v13) (Windows Build Tools for Windows systems)
+
+* `Yarn <https://yarnpkg.com/en/docs/install>`_ 
+
+* `NestCli <https://docs.nestjs.com/cli/overview>`_ 
+
+* `Postgres <https://www.postgresql.org/>`_ 
+
+
+Getting Started
+===============
+
+.. code-block:: bash
+
+  git clone https://github.com/doganbros/octopus # Clone Repository
+  cd octopus
+
+Install dependencies with
+
+.. code-block:: bash
+
+  yarn install
+  
+Set Environment Variables Into .env File
+=======================================
+
+You may configure the environment by making a copy of the boilerplate provided.
+
+.. code-block:: bash
+
+  cp .env.example .env # Then make changes to the boilerplate provided
+  
 
 *********************
 Setting up Mattermost
@@ -53,8 +91,6 @@ Installing the mod_octopus.lua Module
 
 .. code-block:: bash
 
-  git clone https://github.com/doganbros/octopus.git
-  cd octopus
   cp ./external/prosody-modules/mod_octopus.lua /usr/share/jitsi-meet/prosody-plugins
 
 Configuring Prosody
@@ -108,8 +144,6 @@ Customizing the Finalize Script
 
 .. code-block:: bash
 
-  git clone https://github.com/doganbros/octopus
-  cd octopus
   cp {./external/jibri/octopus-finalize.conf, octopus-finalize.sh} /srv/finalize
 
 * Edit /srv/finalize/octopus-finalize.conf accordingly, and restart Jibri.
@@ -130,8 +164,6 @@ Create Octopus Script
 
 .. code-block:: bash
 
-  git clone https://github.com/doganbros/octopus &&
-  cd octopus &&
   mkdir /home/octopus &&
   cp {./external/rtmp/octopus.sh, ./external/rtmp/octopus-sh.conf} /home/octopus &&
   cp ./external/rtmp/sample-nginx.conf /etc/nginx
@@ -142,36 +174,6 @@ Create Octopus Script
 .. code-block:: bash
 
   systemctl restart nginx
-  
-******************
-Setting Up Octopus
-******************
-
-Requirements
-============
-
-* `Node.js <https://nodejs.org/en/download/>`_ 
-
-* `Yarn <https://yarnpkg.com/en/docs/install>`_ 
-
-* `NestCli <https://docs.nestjs.com/cli/overview>`_ 
-
-* `Postgres <https://www.postgresql.org/>`_ 
-
-
-Getting Started
-===============
-
-.. code-block:: bash
-
-  git clone https://github.com/doganbros/octopus # Clone Repository
-  cd octopus
-
-Install dependencies with
-
-.. code-block:: bash
-
-  yarn install
   
 Create Postgres Database
 ========================
@@ -190,14 +192,6 @@ Please follow the steps below to get a development Postgres server running. The 
 
 * Run ``\q`` to quit from Psql and Docker container.
 
-Set Environment Variables Into .env File
-=======================================
-
-You may configure the environment by making a copy of the boilerplate provided.
-
-.. code-block:: bash
-
-  cp .env.example .env # Then make changes to the boilerplate provided
 
 ***************************************
 Running Octopus
