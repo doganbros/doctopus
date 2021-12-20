@@ -140,7 +140,7 @@ Customizing the Finalize Script
       }
   }
 
-* Copy the included finalize.sh file to your finalize script directory.
+* Copy the included finalize.sh file to your finalize script directory. This .sh file runs upon the completion of recording, and both uploads the recorded file to an S3 bucket, and manages Jibri's integration with Octopus.
 
 .. code-block:: bash
 
@@ -160,7 +160,7 @@ For Octopus, you will need at least one ingress server, and as many additional e
 Set Up Octopus Script For RTMP
 ==============================
 
-* Head into the RTMP server, and use the following to copy the required script.
+* Head into the RTMP server, and use the following to copy the required script. This script uploads the recorded streams to an S3 bucket, and reports back to Octopus the condition of current streams.
 
 .. code-block:: bash
 
