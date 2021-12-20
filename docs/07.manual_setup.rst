@@ -130,7 +130,7 @@ To install Jibri you can follow `this tutorial <https://community.jitsi.org/t/tu
 Customizing the Finalize Script
 --------------------------------
 
-* Find the following in your /etc/jitsi/jibri/jibri.conf file, and replace path with /srv/finalize/octopus-finalize.sh
+* Find the following in your ``/etc/jitsi/jibri/jibri.conf`` file, and replace path with ``/srv/finalize/octopus-finalize.sh``
 
 .. code-block:: lua
 
@@ -146,7 +146,7 @@ Customizing the Finalize Script
 
   cp {./external/jibri/octopus-finalize.conf, octopus-finalize.sh} /srv/finalize
 
-* Edit /srv/finalize/octopus-finalize.conf accordingly, and restart Jibri.
+* Edit ``/srv/finalize/octopus-finalize.conf`` accordingly, and restart Jibri.
 
 .. code-block:: bash
   systemctl restart jibri
