@@ -82,7 +82,7 @@ Setting up Jitsi
 Installing Jitsi with JWT support
 =================================
 
-Octopus mmakes use of Jitsi for video streaming and live meeting purposes. It requires a Jitsi installation with JWT token support. You can refer to `this document <https://doganbros.com/index.php/jitsi/jitsi-installation-with-jwt-support-on-ubuntu-18-04-lts/>`_ by us to install Jitsi.
+Octopus mmakes use of Jitsi for video streaming and live meeting purposes. It requires a Jitsi installation with JWT token support. You can refer to `this document <https://doganbros.com/index.php/jitsi/jitsi-installation-with-jwt-support-on-ubuntu-18-04-lts/>`_ by us to install Jitsi. Remember to update the ``.env`` variable by setting ``JWT_APP_ID``'s value to ``YOUR_APP_ID``, ``JITSI_SECRET`` to ``YOUR_SECRET`` and ``JITSI_DOMAIN`` to the domain where you set up jitsi.
 
 Installing the mod_octopus.lua Module
 -------------------------------------
@@ -140,7 +140,7 @@ Customizing the Finalize Script
       }
   }
 
-* Clone the repository below, and copy the included finalize.sh file to your finalize script directory.
+* Copy the included finalize.sh file to your finalize script directory.
 
 .. code-block:: bash
 
@@ -155,17 +155,17 @@ Customizing the Finalize Script
 Setting up the RTMP servers
 ***************************************
 
-For Octopus, you will need at least one ingress server, and as many additional egress servers as you need for ease of autoscalability. To install NGINX rtmp server, you can follow the guide in `this page <https://docs.nginx.com/nginx/admin-guide/dynamic-modules/rtmp/>`_.
+For Octopus, you will need at least one ingress server, and as many additional egress servers as you need for ease of autoscalability. To install NGINX rtmp server, you can follow the guide in `this page <https://docs.nginx.com/nginx/admin-guide/dynamic-modules/rtmp/>`_. Remember to update the ``RTMP_INGRESS_URL`` and ``RTMP_EGRESS_URL`` .env variables to your ingress and egress server url respectively.
 
-Create Octopus Script
-=====================
+Set Up Octopus Script For RTMP
+==============================
 
-* Head into the RTMP server, and use the following to clone the required script.
+* Head into the RTMP server, and use the following to copy the required script.
 
 .. code-block:: bash
 
-  mkdir /home/octopus &&
-  cp {./external/rtmp/octopus.sh, ./external/rtmp/octopus-sh.conf} /home/octopus &&
+  mkdir /home/octopus
+  cp {./external/rtmp/octopus.sh, ./external/rtmp/octopus-sh.conf} /home/octopus
   cp ./external/rtmp/sample-nginx.conf /etc/nginx
 
 
@@ -191,6 +191,8 @@ Please follow the steps below to get a development Postgres server running. The 
 * Inside the docker container, run ``'CREATE DATABASE octopus'`` to create your Octopus database.
 
 * Run ``\q`` to quit from Psql and Docker container.
+
+* Remember to update ``DB_USER``, ``DB_PASSWORD``, ``DB_DATABASE`` and ``DB_HOST`` .env variables to your database user name, database password database name, and database host respectively.
 
 
 ***************************************
