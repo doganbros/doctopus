@@ -47,7 +47,7 @@ If you do not have SSL certicates already, run the script below to obtain one.
 ***************************************
 Generate Strong Passwords
 ***************************************
-To generate secured and strong passwords for octopus and jitsi, run the script below.
+To generate secured and strong passwords in the security section options of ``.env`` file for Octopus and Jitsi, run the script below.
 
 .. code-block:: bash
 
