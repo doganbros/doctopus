@@ -87,7 +87,7 @@ Octopus mmakes use of Jitsi for video streaming and live meeting purposes. It re
 Installing the mod_octopus.lua Module
 -------------------------------------
 
-* Once the Jitsi is installed, enter the Jitsi machine and grab the repository below and copy the contents of the downloaded folder into ``/usr/share/jitsi-meet/prosody-plugins``.
+* This .lua module for Jitsi Meet manages the integration between octopus and Jitsi, allowing the latter to send reports to the former. To enable it, we must first put the file in the correct directory and configure prosody accordingly.
 
 .. code-block:: bash
 
@@ -160,7 +160,7 @@ For Octopus, you will need at least one ingress server, and as many additional e
 Set Up Octopus Script For RTMP
 ==============================
 
-* Head into the RTMP server, and use the following to copy the required script. This script uploads the recorded streams to an S3 bucket, and reports back to Octopus the condition of current streams.
+* Head into the RTMP server, and use the following to copy the required scripts. ``sample-nginx.conf`` contains a working example for an RTMP server, who calls upon ``octopus.sh`` in its workflow. ``octopus.sh``is the script that maintains the integration between the RTMP server and Octopus. ``octopus-sh.conf`` contains customizable variables for the script.
 
 .. code-block:: bash
 
