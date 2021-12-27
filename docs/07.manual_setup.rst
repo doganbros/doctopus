@@ -37,7 +37,7 @@ Install dependencies with
 Set Environment Variables Into .env File
 =======================================
 
-You may configure the environment by making a copy of the boilerplate provided.
+You may configure the environment by making a copy of the boilerplate provided. The functionality of each environment variable is documented within the ``.env.example`` file.
 
 .. code-block:: bash
 
@@ -73,7 +73,7 @@ Please follow the steps below to get a development mattermost server running. Th
    to set up the system adminstrator of mattermost. The last but not
    least variable, ``REACT_APP_MM_TEAM_NAME`` sets up the team name that
    will be used by octopus in mattermost. Examples can be found in the
-   ``.env.example`` file.
+   ``.env.example`` file for Octopus.
 
 ****************
 Setting up Jitsi
@@ -84,10 +84,10 @@ Installing Jitsi with JWT support
 
 Octopus mmakes use of Jitsi for video streaming and live meeting purposes. It requires a Jitsi installation with JWT token support. You can refer to `this document <https://doganbros.com/index.php/jitsi/jitsi-installation-with-jwt-support-on-ubuntu-18-04-lts/>`_ by us to install Jitsi. Remember to update the ``.env`` variable by setting ``JWT_APP_ID``'s value to ``YOUR_APP_ID``, ``JITSI_SECRET`` to ``YOUR_SECRET`` and ``JITSI_DOMAIN`` to the domain where you set up jitsi.
 
-Installing the mod_octopus.lua Module
--------------------------------------
+Integrating Jitsi with Octopus
+------------------------------
 
-* This .lua module for Jitsi Meet manages the integration between octopus and Jitsi, allowing the latter to send reports to the former. To enable it, we must first put the file in the correct directory and configure prosody accordingly.
+* This .lua module for Jitsi Meet manages the integration between octopus and Jitsi. It enables Jitsi to send reports to Octopus. To enable it, follow the instructions below.
 
 .. code-block:: bash
 
@@ -152,15 +152,15 @@ Customizing the Finalize Script
   systemctl restart jibri
   
 ***************************************
-Setting up the RTMP servers
+Setting up the Ingress RTMP servers
 ***************************************
 
 For Octopus, you will need at least one ingress server, and as many additional egress servers as you need for ease of autoscalability. To install NGINX rtmp server, you can follow the guide in `this page <https://docs.nginx.com/nginx/admin-guide/dynamic-modules/rtmp/>`_. Remember to update the ``RTMP_INGRESS_URL`` and ``RTMP_EGRESS_URL`` .env variables to your ingress and egress server url respectively.
 
-Set Up Octopus Script For RTMP
-==============================
+Integrating the RTMP server with Octopus
+=====================================
 
-* Head into the RTMP server, and use the following to copy the required scripts. ``sample-nginx.conf`` contains a working example for an RTMP server, who calls upon ``octopus.sh`` in its workflow. ``octopus.sh``is the script that maintains the integration between the RTMP server and Octopus. ``octopus-sh.conf`` contains customizable variables for the script.
+* Head into the RTMP server, and use the following to copy the required scripts. ``sample-nginx.conf`` contains a working example for an RTMP server, who calls upon ``octopus.sh`` in its workflow. ``octopus.sh`` is the script that maintains the integration between the RTMP server and Octopus. ``octopus-sh.conf`` contains customizable variables for the script.
 
 .. code-block:: bash
 
@@ -175,7 +175,7 @@ Set Up Octopus Script For RTMP
 
   systemctl restart nginx
   
-Create Postgres Database
+Creating Postgres Database
 ========================
 
 Please follow the steps below to get a development Postgres server running. The easiest way to use `docker <https://www.docker.com/>`_. If you have running Postgres database server you can skip these steps and simply create an Octopus database.
