@@ -2,7 +2,7 @@
 How Does It Work?
 #################
 
-Octopus is an orchestrator which provides effective and robust integration with various media services. Octopus ties up following media solutions and services:
+Purpie is an orchestrator which provides effective and robust integration with various media services. Purpie ties up following media solutions and services:
 
 * Jitsi for:
  * Online meetings
