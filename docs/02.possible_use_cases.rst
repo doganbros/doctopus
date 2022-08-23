@@ -2,7 +2,7 @@
 Possible Use Cases
 #########################
 
-Octopus can be used as it is or customised for any kind of video based social media needs.
+Purpie can be used as it is or customised for any kind of video based social media needs.
 
 Here are some possible use cases:
 
