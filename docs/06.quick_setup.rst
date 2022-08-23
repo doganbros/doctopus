@@ -3,7 +3,7 @@
 Quick Setup
 #########################
 
-Quick Setup guide focuses on an easily configured development environment. In this environment, Octopus, Mattermost, RTMP servers and Jitsi each run in their own containers. An FQDN (Fully Qualified Domain Name) will be required.
+Quick Setup guide focuses on an easily configured development environment. In this environment, Purpie, Mattermost, RTMP servers and Jitsi each run in their own containers. An FQDN (Fully Qualified Domain Name) will be required.
 
 
 ***************************************
@@ -15,7 +15,7 @@ Since all the components will be running in containers, you will need Docker and
 You can follow `this link <https://docs.docker.com/compose/install/>`_ to install Docker Compose.
  
 ***************************************
-Download Octopus from GitHub Repository
+Download Purpie from GitHub Repository
 ***************************************
 
 .. code-block:: bash
@@ -25,10 +25,10 @@ Download Octopus from GitHub Repository
   cd octopus-docker
   
 ***************************************
-Configure Octopus
+Configure Purpie
 ***************************************
 
-Make a copy of the ``.env.example`` named ``.env``. This ``.env`` contains environment variables for `Jitsi <https://jitsi.github.io/handbook/docs/devops-guide/devops-guide-docker#configuration>`_ as well as `Octopus <https://jitsi.github.io/handbook/docs/devops-guide/devops-guide-docker#configuration>`_. You may find help in the respective links.
+Make a copy of the ``.env.example`` named ``.env``. This ``.env`` contains environment variables for `Jitsi <https://jitsi.github.io/handbook/docs/devops-guide/devops-guide-docker#configuration>`_ as well as `Purpie <https://jitsi.github.io/handbook/docs/devops-guide/devops-guide-docker#configuration>`_. You may find help in the respective links.
 
 
 ***************************************
@@ -47,14 +47,14 @@ If you do not have SSL certicates already, run the script below to obtain one.
 ***************************************
 Generate Strong Passwords
 ***************************************
-To generate secured and strong passwords in the security section options of ``.env`` file for Octopus and Jitsi, run the script below.
+To generate secured and strong passwords in the security section options of ``.env`` file for Purpie and Jitsi, run the script below.
 
 .. code-block:: bash
 
   ./gen-passwords.sh
  
 ***************************************
-Start Octopus
+Start Purpie
 ***************************************
 
 .. code-block:: bash
