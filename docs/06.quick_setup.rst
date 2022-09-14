@@ -68,4 +68,4 @@ Sometimes, especially after an update, you might want to rebuild your image. Doi
 
 .. code-block:: bash
 
-  docker-compose up -d --build
+  docker-compose up --build -d
