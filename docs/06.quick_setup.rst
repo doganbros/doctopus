@@ -60,3 +60,12 @@ Start Purpie
 .. code-block:: bash
 
   docker-compose up -d
+  
+***************************************
+Rebuilding the Image
+***************************************
+Sometimes, especially after an update, you might want to rebuild your image. Doing so would let you build your frontend again.
+
+.. code-block:: bash
+
+  docker-compose up -d --build
