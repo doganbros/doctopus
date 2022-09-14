@@ -66,6 +66,12 @@ Rebuilding the Image
 ***************************************
 Sometimes, especially after an update, you might want to rebuild your image. Doing so would let you build your frontend again.
 
+First, bring your docker containers down;
+.. code-block:: bash
+
+  docker-compose down
+
+Then start them up again with the following command.
 .. code-block:: bash
 
   docker-compose up --build -d
