@@ -21,8 +21,8 @@ Download Purpie from GitHub Repository
 .. code-block:: bash
 
   sudo apt-get install git
-  git clone https://github.com/doganbros/octopus.git
-  cd octopus-docker
+  git clone https://github.com/doganbros/purpie-docker.git
+  cd purpie-docker
   
 ***************************************
 Configure Purpie
