@@ -43,38 +43,6 @@ You may configure the environment by making a copy of the boilerplate provided. 
 
   cp .env.example .env # Then make changes to the boilerplate provided
   
-
-*********************
-Setting up Mattermost
-*********************
-
-Please follow the steps below to get a development mattermost server running. The easiest way to use docker.
-
-1. Make sure you have docker installed on your computer. If you do not
-   have docker already on your computer, Go to
-   https://www.docker.com/get-started, choose your platform and click
-   download. Follow the simple steps to get docker installed on your
-   computer.
-2. Open your terminal (command prompt or preferably powershell on
-   windows).
-3. Enter the command
-   ``docker run --name octopus-mattermost-preview -d --publish 8065:8065 --add-host dockerhost:127.0.0.1 doganbros/octopus:mattermost-preview``
-4. If you want to change the port where mattermost runs by default,
-   replace ``<port>:8065`` by your prefered port while typing the
-   command.
-5. Wait for some few minutes for the mattermost server to boot up.
-6. To view the logs enter the command
-   ``docker logs octopus-mattermost-preview -f``
-7. Update all the environment variables used by octopus to set up
-   mattermost. The variables ``REACT_APP_MM_SERVER_URL``, ``MATTERMOST_PORT`` and ``MM_SERVER_URL``
-   are used to point to the mattermost server just installed. The
-   variables ``MM_SYS_ADMIN_USERNAME``, ``MM_SYS_ADMIN_EMAIL``,
-   ``MM_SYS_ADMIN_PASSWORD`` and ``MM_BOT_USERNAME`` are used by octopus
-   to set up the system adminstrator of mattermost. The last but not
-   least variable, ``REACT_APP_MM_TEAM_NAME`` sets up the team name that
-   will be used by octopus in mattermost. Examples can be found in the
-   ``.env.example`` file for Purpie.
-
 ****************
 Setting up Jitsi
 ****************
