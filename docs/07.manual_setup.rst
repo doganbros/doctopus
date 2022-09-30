@@ -192,4 +192,4 @@ Running Purpie
   yarn start:server # Runs backend in production
   yarn start:web # Runs frontend side
   
-You may refer to this `sample NGINX config https://github.com/doganbros/purpie/tree/master/external/nginx`_ to set up your Purpie web server.
+You may refer to this `sample NGINX config <https://github.com/doganbros/purpie/tree/master/external/nginx>`_ to set up your Purpie web server.
