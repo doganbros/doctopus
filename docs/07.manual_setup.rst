@@ -43,7 +43,7 @@ You may configure the environment by making a copy of the boilerplate provided. 
 
   cp .env.example .env # Then make changes to the boilerplate provided
 
-  Creating Postgres Database
+Creating Postgres Database
 ========================
 
 Please follow the steps below to get a development Postgres server running. The easiest way to use `docker <https://www.docker.com/>`_. If you have running Postgres database server you can skip these steps and simply create an Purpie database.
