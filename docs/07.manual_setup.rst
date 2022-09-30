@@ -61,7 +61,7 @@ This module is a React Module that applies on top of Jitsi to provide visual and
   git clone https://github.com/doganbros/purpie-jitsi-meet.git
   cd purpie-jitsi-meet
   
-The module is included in the package.json file within the module. Therefore, you are able to simply follow the promtps as shown;
+The module is included in the package.json file within the repository. Therefore, you are able to simply follow the promtps as shown;
 
 .. code-block:: bash
 
