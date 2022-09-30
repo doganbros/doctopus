@@ -2,7 +2,7 @@
 Manual Setup
 #########################
 
-Manual Setup installs each component individually to maximize control and configurability. All components can be installed into a single machine, provided the machine has an FQDN, and is strong enough to meet the requirements.
+Manual Setup installs each component individually to maximize control and configurability. All components can be installed into a single machine, provided the machine has an FQDN, and is strong enough to meet the requirements. Please make sure the certificate for the domain includes not only the domain itself, but all its belonging subdomains as well. You may ensure it by using a wildcard like "*.mydomain.com" when procuring the certificate.
 
 ******************
 Setting Up Purpie
@@ -51,6 +51,25 @@ Installing Jitsi with JWT support
 =================================
 
 Purpie mmakes use of Jitsi for video streaming and live meeting purposes. It requires a Jitsi installation with JWT token support. You can refer to `this document <https://doganbros.com/index.php/jitsi/jitsi-installation-with-jwt-support-on-ubuntu-18-04-lts/>`_ by us to install Jitsi. Remember to update the ``.env`` variable by setting ``JWT_APP_ID``'s value to ``YOUR_APP_ID``, ``JITSI_SECRET`` to ``YOUR_SECRET`` and ``JITSI_DOMAIN`` to the domain where you set up jitsi.
+
+Istalling Purpie Jitsi Module
+------------------------------
+This module is a React Module that applies on top of Jitsi to provide visual and functional differentiations. To avoid issues regarding version mismatch, start with the customized Jitsi repo below;
+
+.. code-block:: bash
+
+  git clone https://github.com/doganbros/purpie-jitsi-meet.git
+  cd purpie-jitsi-meet
+  
+The module is included in the package.json file within the module. Therefore, you are able to simply follow the promtps as shown;
+
+.. code-block:: bash
+
+  npm install
+  export WEBPACK_DEV_SERVER_PROXY_TARGET=https://yourdomain.com
+  make
+
+At this point, your customized Jitsi is built and ready to serve. Make sure to edit the NGINX configuration accordingly to make use of your new directory.
 
 Integrating Jitsi with Purpie
 ------------------------------
@@ -172,3 +191,5 @@ Running Purpie
   yarn server:start:dev # Runs backend side in dev mode
   yarn start:server # Runs backend in production
   yarn start:web # Runs frontend side
+  
+You may refer to this `sample NGINX config https://github.com/doganbros/purpie/tree/master/external/nginx`_ to set up your Purpie web server.
