@@ -3,7 +3,7 @@
 Quick Setup
 #########################
 
-Quick Setup guide focuses on an easily configured development environment. In this environment, Purpie, Mattermost, RTMP servers and Jitsi each run in their own containers. An FQDN (Fully Qualified Domain Name) will be required.
+Quick Setup guide focuses on an easily configured development environment. In this environment, Purpie, RTMP servers and Jitsi each run in their own containers. An FQDN (Fully Qualified Domain Name) will be required.
 
 
 ***************************************
@@ -35,7 +35,7 @@ Make a copy of the ``.env.example`` named ``.env``. This ``.env`` contains envir
 Generate SSL Certificates
 ***************************************
 
-SSL certificates are required for jitsi and octopus to work correctly. If you have ssl certificates already, copy them to ``./docker/ssl`` directory. The ``fullchain`` certificate should be named as ``cert.crt`` where as the ``private`` certificate should be named as ``cert.key``.
+SSL certificates are required for jitsi, purpie and RTMP servers to work correctly. If you have ssl certificates already, copy them to ``./docker/ssl`` directory. The ``fullchain`` certificate should be named as ``cert.crt`` where as the ``private`` certificate should be named as ``cert.key``.
 
 If you do not have SSL certicates already, run the script below to obtain one.
 
