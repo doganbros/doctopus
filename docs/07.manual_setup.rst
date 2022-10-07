@@ -52,11 +52,11 @@ Please follow the steps below to get a development Postgres server running. The 
 
 * Open your terminal (command prompt or preferably powershell on windows).
 
-* Enter the command ``docker run --name octopus-dev -e POSTGRES_PASSWORD=$YOUR_POSTGRES_PASSWORD -p 5432:5432 -d postgres``. Postgres docker image will be downloaded and Postgres Docker container with the name octopus-dev will up and serve from port 5432 after this command.
+* Enter the command ``docker run --name purpie-dev -e POSTGRES_PASSWORD=$YOUR_POSTGRES_PASSWORD -p 5432:5432 -d postgres``. Postgres docker image will be downloaded and Postgres Docker container with the name purpie-dev will up and serve from port 5432 after this command.
 
-* Run ``docker exec -it octopus-dev psql -U postgres`` to connect your Postgres database.
+* Run ``docker exec -it purpie-dev psql -U postgres`` to connect your Postgres database.
 
-* Inside the docker container, run ``'CREATE DATABASE octopus'`` to create your Purpie database.
+* Inside the docker container, run ``'CREATE DATABASE purpie'`` to create your Purpie database.
 
 * Run ``\q`` to quit from Psql and Docker container.
 
