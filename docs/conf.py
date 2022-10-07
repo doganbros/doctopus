@@ -43,7 +43,7 @@ source_suffix = ['.rst', '.txt']
 master_doc = 'index'
 
 # General information about the project.
-project = u'Octopus'
+project = u'Purpie'
 copyright = u'2022, Doganbros'
 
 # The version info for the project you're documenting, acts as replacement for
