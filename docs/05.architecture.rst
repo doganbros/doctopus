@@ -2,7 +2,7 @@
 Architecture
 #########################
 
-.. image:: images/octopus_system_architecture.png
+.. image:: images/Purpie Systems Architecture.png
   :width: 400
   :alt: Octopus System Architecture
   :align: center
