@@ -56,7 +56,7 @@ Please follow the steps below to get a development Postgres server running. The 
 
 * Run ``docker exec -it purpie-dev psql -U postgres`` to connect your Postgres database.
 
-* Inside the docker container, run ``'CREATE DATABASE purpie'`` to create your Purpie database.
+* Inside the docker container, run ``CREATE DATABASE 'purpie';`` to create your Purpie database.
 
 * Run ``\q`` to quit from Psql and Docker container.
 
