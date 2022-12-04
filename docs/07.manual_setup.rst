@@ -104,7 +104,7 @@ The module is included in the package.json file within the repository. Therefore
 At this point, your customized Jitsi is built and ready to serve. Make sure to edit the NGINX configuration accordingly to make use of your new directory.
 
 Integrating Jitsi with Purpie
-------------------------------
+=================================
 
 * This .lua module for Jitsi Meet manages the integration between purpie and Jitsi. It enables Jitsi to send reports to Purpie. To enable it, follow the instructions below.
 
