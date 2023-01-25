@@ -2,21 +2,24 @@
 Possible Use Cases
 #########################
 
-Purpie can be used as it is or customised for any kind of video based social media needs.
+Purpie can be used as is or customised for any kind of video based social media needs.
 
 Here are some possible use cases:
 
 * Social media platform;
 
-  * For specific business domains such as e-learning, video content monetization, benchmarking etc... 
+  * For specific business domains such as e-learning, benchmarking etc... 
   
   * For local authorities such as municipalities.
   
-  * For societies, clubs, religious groups etc.
+  * For societies, clubs, religious groups etc...
   
   * To be used by a company internally.
   
   * So on...
+
+
+* Gaming and entertainment streams.
 
 * Monetizing video content of a video production company.
 
