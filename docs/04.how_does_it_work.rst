@@ -6,18 +6,12 @@ Purpie is an orchestrator which provides effective and robust integration with v
 
 * Jitsi for:
  * Online meetings
- * Seminars (Large rooms)
- * Streaming meetings
- * Recording meetings
+ * Webinars (Large rooms)
+ * Streaming & recording meetings
 
 * Nginx RTMP Servers for:
  * Live and on-demand streaming
  * Recording
 
-* AWS for:
- * Compute power with EC2
- * Storage with S3
- * Autoscaling & Load Balancing
-  
-* Mattermost for:
- * Instant messaging and chat
+* Cloud-storage for:
+ * On demand video delivery
