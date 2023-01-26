@@ -15,7 +15,7 @@ Following key points should be in consideration while interacting with Zones:
 * Private Zones can only be accessed by the Zone members.
 * Public Zones are open to other Purpie users.
 * Users can join existing public Zones in Purpie and join Private Zones only through invites.
-* A user can create a Channel inside a Zone if they are the Zone owner or individual Zone members can if permitted by the owner.
+* A user can create a Channel inside a Zone if they are the Zone owner or if given a role that has permissions to create Channels by the Zone owner.
 
 What is a Channel?
 ==================
@@ -25,16 +25,16 @@ Users can create and share content from a Channel, which is always under a Zone.
 Following key points should be in consideration while interacting with Channels:
 
 * Channels can be private or public. 
-* Users can share content from a Channel (also from their Profile but will come later). 
+* Users can share content from a Channel (also from their Profile but wwe will come to that later). 
 * Private Channels can only be accessed by the Channel followers.
-* Public Channels are open to other Purpie members.
-* Users can follow existing public Channels in Purpie and join Private Channels only through invites.
-* A user can create a content inside a Channel if they are the Channel owner or individual Channel members can if permitted by the owner.
+* Public Channels are open to other Purpie users.
+* Users can follow existing public Channels and join private Channels only through invites.
+* Users can create content inside a Channel only if they are the Channel owner or if given a role that has permissions to create content by the Channel owner.
 
 What is a Profile?
 ==================
 
-By default, each user will have a profile like any site having membership functionality. Users can create content from his profile and can share it only with contacts. Contacts are very similar to people on your mobile phones. Profiles are very handy if a user does not want to create a Zone or channel but just wants to share a video content with the people he may know.
+By default, each user has a profile in Purpie, like it is such in any site having membership functionality. Users can create content from their profile and can share it only with contacts. Contacts are very similar to people on your mobile phone. Profiles are very handy if a user does not want to create a Zone or Channel but just wants to share a video content with the people they may know.
 
 Following key points should be in consideration while interacting with Profiles:
 
