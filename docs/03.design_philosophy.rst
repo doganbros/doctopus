@@ -34,10 +34,10 @@ Following key points should be in consideration while interacting with Channels:
 What is a Profile?
 ==================
 
-By default, each user has a profile in Purpie, like it is such in any site having membership functionality. Users can add others into their People, which are the only ones who can see the content they publish through their profile. Contacts are very similar to people on your mobile phone. Profiles are very handy if a user does not want to create a Zone or Channel but just wants to share a video content with the people they may know.
+By default, each user has a profile in Purpie, like it is such in any site having membership functionality Users can add others into their Contacts, which are the only ones who can see the content they publish through their profile. Profiles are very handy if a user does not want to create a Zone or Channel but just wants to share a video content with the people they may know.
 
 Following key points should be in consideration while interacting with Profiles:
 
 * Users can share content from their Profiles only with their Contacts. 
 * Each user can have a single Profile. 
-* Users can send a Contact request to other Purpie users.
+* Users can request to add any other Purpie user to their Contacts.
