@@ -1,5 +1,5 @@
 #########################
-Manual Setup
+Setup from Scratch
 #########################
 
 Manual Setup installs each component individually to maximize control and configurability. All components can be installed into a single machine, provided the machine has an FQDN, and is strong enough to meet the requirements. Please make sure the certificate for the domain includes not only the domain itself, but all its belonging subdomains as well. You may ensure it by using a wildcard like "*.mydomain.com" when procuring the certificate.
