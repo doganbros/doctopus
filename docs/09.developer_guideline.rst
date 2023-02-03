@@ -25,7 +25,6 @@ Clone Repository
   git clone https://github.com/doganbros/purpie
   cd purpie
 
-.. code-block:: rst
 
 Install dependencies
 ====================
@@ -34,7 +33,6 @@ Install dependencies
 
   yarn install
   
-.. code-block:: rst
 
 
 Set environment variables into .env file:
@@ -44,7 +42,6 @@ Set environment variables into .env file:
 
   cp .env.example .env 
   
-.. code-block:: rst
 
 Then make changes to the boilerplate provided
 
@@ -57,8 +54,6 @@ If Purpie is installed on your local computer, you will need to add the followin
 .. code-block:: rst
 
  127.0.0.1	purpie.localhost
-  
-.. code-block:: rst
 
 
 Run project
@@ -68,7 +63,6 @@ Run project
 
   yarn start
   
-.. code-block:: rst
 
 Try Purpie
 ==========
@@ -105,7 +99,6 @@ Please follow the steps below to get a development Postgres server running. The 
 
   docker run --name purpie-postgres-dev -e POSTGRES_PASSWORD=YOUR_DB_PASSWORD -p 5432:5432 -d postgres 
   
-.. code-block:: rst
 
 * Postgres docker image will be downloaded and Postgres Docker container with the name purpie-postgres-dev will up and serve from port 5432 after this command.
 
@@ -115,7 +108,6 @@ Please follow the steps below to get a development Postgres server running. The 
 
  docker exec -it purpie-postgres-dev psql -U postgres
   
-.. code-block:: rst
 
 * To create your Purpie database.
 
@@ -123,7 +115,6 @@ Please follow the steps below to get a development Postgres server running. The 
 
  CREATE DATABASE purpie;
   
-.. code-block:: rst
 
 * Update your ``.env`` file with ``YOUR_DB_PASSWORD`` .
 
@@ -139,7 +130,6 @@ To run backend server in production
 
   yarn start:server   
   
-.. code-block:: rst
 
 To run backend server in development 
 
@@ -147,7 +137,6 @@ To run backend server in development
 
   yarn start:server:dev   
   
-.. code-block:: rst
 
 API Testing
 ===========
