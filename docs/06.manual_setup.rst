@@ -43,11 +43,8 @@ You may configure the environment by making a copy of the boilerplate provided. 
 
   cp .env.example .env # Then make changes to the boilerplate provided
 
-You can find a brief coverage of most prominent variables below.;
 
-
-
-.. list-table:: Title
+.. list-table:: You can find a brief coverage of most prominent variables below.
    :widths: 25 25 50
    :header-rows: 1
 
