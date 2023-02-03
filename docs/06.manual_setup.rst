@@ -45,6 +45,25 @@ You may configure the environment by making a copy of the boilerplate provided. 
 
 You can find a brief coverage of most prominent variables below.;
 
+
+
+.. list-table:: Title
+   :widths: 25 25 50
+   :header-rows: 1
+
+   * - Variable
+     - Example
+     - Explanation
+   * - HOST
+     - purpie.io
+     - Simply the link from which you serve purpie.
+   * - REACT_APP_SERVER_HOST
+     - http://purpie.io:8000
+     - The URL you serve Purpie backend from, including the port.
+   * - REACT_APP_CLIENT_HOST
+     - http://purpie.io:3000
+     - The URL you serve Purpie frontend from, including the port.
+     
 +------------------------+------------------------+-----------------------------------------------------------+
 | Variable               | Example                | Explanation                                               |
 +========================+========================+===========================================================+
