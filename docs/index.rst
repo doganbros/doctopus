@@ -38,9 +38,9 @@ If you'd like to learn more about us, you can visit our website.
    02.possible_use_cases.rst
    03.design_philosophy.rst
    04.how_does_it_work.rst
-   05.architecture.rst
-   06.quick_setup.rst
-   07.manual_setup.rst
+   05.quick_setup.rst
+   06.manual_setup.rst
+   07.testing.rst
    08.road_map.rst
    09.developer_guideline.rst
    10.contribution.rst
