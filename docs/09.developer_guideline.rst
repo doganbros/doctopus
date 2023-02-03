@@ -2,208 +2,157 @@
 Developer Guideline
 #########################
 
-This document focuses on style-guide.
-It is a kind of coding standards applied to documentation files.
-It is not about documentation content.
+This document focuses frontend and backend development of Purpie project.
 
 
 ***************************************
-RestructuredText with Sphinx directives
+Frontend
 ***************************************
 
-This documentation uses `Python-sphinx`_, which itself uses `reStructuredText`_
-syntax.
+
+Requirements 
+============
+
+* `Node.js <https://nodejs.org/en/download/>`_. (>= 10.13.0, except for v13) (Windows Build Tools for Windows systems)
+* `Yarn <https://classic.yarnpkg.com/en/docs/install>`_.
 
 
-*********
-Filenames
-*********
+Clone Repository
+================
 
-Use only lowercase alphanumeric characters and ``-`` (minus) symbol.
+.. code-block:: rst
 
-Suffix filenames with the ``.txt`` extension.
+  git clone https://github.com/doganbros/purpie
+  cd purpie
 
-.. note::
+.. code-block:: rst
 
-  Usage of ``.rst`` extension is not recommended because:
+Install dependencies
+====================
 
-  * RST files are human-readable text files. Most systems natively recognize
-    the ``.txt`` extension and open these files with a text editor. This is
-    a good choice.
+.. code-block:: rst
 
-  * Some programs parse ``.rst`` with `rst2html`_, which cannot interpret some
-    Sphinx's directives such as ``code-block``. So readers using such programs
-    actually lose some content.
-
-    As an example, well known `Github`_ platform uses rst2html
-    to render ``.rst`` files in its repository browser. Not only you lose
-    content, you also lose features like links to lines.
-
-  * When you need to read HTML builds of the documentation, best practice is to
-    export documentation as static builds with ``sphinx-build`` command, then
-    host and serve these builds as static files. For public projects, you may
-    have a look at services like `Read the docs`_.
+  yarn install
+  
+.. code-block:: rst
 
 
-***********
-Whitespaces
-***********
+Set environment variables into .env file:
+=========================================
 
-Indentation
+.. code-block:: rst
+
+  cp .env.example .env 
+  
+.. code-block:: rst
+
+Then make changes to the boilerplate provided
+
+Setting web server and routing
+==============================
+
+If Purpie is installed on your local computer, you will need to add the following line to your hosts file. The hosts file for Unix based system including MacOs is ``/etc/hosts`` where as on Windows, it is ``C:\windows\system32\drivers\etc\hosts``.
+
+
+.. code-block:: rst
+
+ 127.0.0.1	purpie.localhost
+  
+.. code-block:: rst
+
+
+Run project
 ===========
 
-Indent with 2 spaces.
+.. code-block:: rst
 
-Except:
+  yarn start
+  
+.. code-block:: rst
 
-* ``toctree`` directive requires a 3 spaces indentation.
+Try Purpie
+==========
 
-Blank lines
+* Visit http://purpie.localhost:3000 (3000 is the default port) and create your super admin user.
+
+***************************************
+Backend
+***************************************
+
+
+Requirements 
+============
+
+* `Node.js <https://nodejs.org/en/download/>`_. (>= 10.13.0, except for v13) (Windows Build Tools for Windows systems)
+* `Yarn <https://classic.yarnpkg.com/en/docs/install>`_.
+* `NestCli <https://docs.nestjs.com/cli/overview>`_.
+* `Postgress <https://www.postgresql.org/download/>`_.
+
+First steps are same with fronted setup.
+
+Create Postgres database
+========================
+
+Please follow the steps below to get a development Postgres server running. The easiest way to use `docker <https://www.docker.com>`_. If you have running Postgres database server you can skip these steps and simply create an Purpie database.
+
+* Make sure you have docker installed on your computer. If you do not have docker already on your computer, Go to https://www.docker.com/get-started, choose your platform and click download. Follow the simple steps to get docker installed on your computer.
+
+* Open your terminal (command prompt or preferably powershell on windows).
+
+* Enter the command 
+
+.. code-block:: rst
+
+  docker run --name purpie-postgres-dev -e POSTGRES_PASSWORD=YOUR_DB_PASSWORD -p 5432:5432 -d postgres 
+  
+.. code-block:: rst
+
+* Postgres docker image will be downloaded and Postgres Docker container with the name purpie-postgres-dev will up and serve from port 5432 after this command.
+
+* To connect your Postgres database.
+
+.. code-block:: rst
+
+ docker exec -it purpie-postgres-dev psql -U postgres
+  
+.. code-block:: rst
+
+* To create your Purpie database.
+
+.. code-block:: rst
+
+ CREATE DATABASE purpie;
+  
+.. code-block:: rst
+
+* Update your ``.env`` file with ``YOUR_DB_PASSWORD`` .
+
+* Run ``\q`` to quit from Psql and Docker container.
+
+
+Run project
 ===========
 
-Two blank lines before overlined sections, i.e. before H1 and H2.
-One blank line before other sections.
-See `Headings`_ for an example.
-
-One blank line to separate directives.
+To run backend server in production 
 
 .. code-block:: rst
 
-  Some text before.
+  yarn start:server   
+  
+.. code-block:: rst
 
-  .. note::
-
-    Some note.
-
-Exception: directives can be written without blank lines if they are only one
-line long.
+To run backend server in development 
 
 .. code-block:: rst
 
-  .. note:: A short note.
-
-
-***********
-Line length
-***********
-
-Limit all lines to a maximum of 79 characters.
-
-
-********
-Headings
-********
-
-Use the following symbols to create headings:
-
-#. ``#`` with overline
-#. ``*`` with overline
-#. ``=``
-#. ``-``
-#. ``^``
-#. ``"``
-
-As an example:
-
+  yarn start:server:dev   
+  
 .. code-block:: rst
 
-  ##################
-  H1: document title
-  ##################
+API Testing
+===========
 
-  Introduction text.
-
-
-  *********
-  Sample H2
-  *********
-
-  Sample content.
+Visit http://purpie.localhost:8000/swagger/ to try out some backend APIs.
 
 
-  **********
-  Another H2
-  **********
 
-  Sample H3
-  =========
-
-  Sample H4
-  ---------
-
-  Sample H5
-  ^^^^^^^^^
-
-  Sample H6
-  """""""""
-
-  And some text.
-
-If you need more than heading level 4 (i.e. H5 or H6), then you should consider
-creating a new document.
-
-There should be only one H1 in a document.
-
-.. note::
-
-  See also `Sphinx's documentation about sections`_.
-
-
-***********
-Code blocks
-***********
-
-Use the ``code-block`` directive **and** specify the programming language. As
-an example:
-
-.. code-block:: rst
-
-  .. code-block:: python
-
-    import this
-
-
-********************
-Links and references
-********************
-
-Use links and references footnotes with the ``target-notes`` directive.
-As an example:
-
-.. code-block:: rst
-
-  #############
-  Some document
-  #############
-
-  Some text which includes links to `Example website`_ and many other links.
-
-  `Example website`_ can be referenced multiple times.
-
-  (... document content...)
-
-  And at the end of the document...
-
-  **********
-  References
-  **********
-
-  .. target-notes::
-
-  .. _`Example website`: http://www.example.com/
-
-
-**********
-References
-**********
-
-.. target-notes::
-
-.. _`Python-sphinx`: http://sphinx.pocoo.org/
-.. _`reStructuredText`: http://docutils.sourceforge.net/rst.html
-.. _`rst2html`:
-   http://docutils.sourceforge.net/docs/user/tools.html#rst2html-py
-.. _`Github`: https://github.com
-.. _`Read the docs`: http://readthedocs.org
-.. _`Sphinx's documentation about sections`:
-   http://sphinx.pocoo.org/rest.html#sections
