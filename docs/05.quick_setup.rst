@@ -28,7 +28,7 @@ Download Purpie from GitHub Repository
 Configure Purpie
 ***************************************
 
-Make a copy of the ``.env.example`` named ``.env``. This ``.env`` contains environment variables for `Jitsi <https://jitsi.github.io/handbook/docs/devops-guide/devops-guide-docker#configuration>`_ as well as `Purpie <https://jitsi.github.io/handbook/docs/devops-guide/devops-guide-docker#configuration>`_.
+Make a copy of the ``.env.example`` named ``.env``. This ``.env`` contains environment variables for `Jitsi <https://jitsi.github.io/handbook/docs/devops-guide/devops-guide-docker#configuration>`_ as well as `Purpie <https://docs.purpie.org/en/latest/06.manual_setup.html>`_.
 
 ***************************************
 Generate SSL Certificates
