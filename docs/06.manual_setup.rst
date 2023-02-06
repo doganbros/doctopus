@@ -51,30 +51,33 @@ You may configure the environment by making a copy of the boilerplate provided. 
    * - Variable
      - Example
      - Explanation
+   * - NODE_ENV
+     - development
+     - The environment your application runs in.
+   * - SERVER_PORT
+     - 8000
+     - The port the backend server is running on.
+   * - PORT
+     - 3000
+     - The port the frontend serves from.
    * - HOST
      - purpie.io
-     - Simply the link from which you serve purpie.
-   * - REACT_APP_SERVER_HOST
-     - http://purpie.io:8000
-     - The URL you serve Purpie backend from, including the port.
-   * - REACT_APP_CLIENT_HOST
-     - http://purpie.io:3000
-     - The URL you serve Purpie frontend from, including the port.
+     - Host address for backend and frontend.
+   * - PURPIE_API_KEY
+     - YOUR_API_KEY
+     - Key for access API directly with PURPIE_API_SECRET
+   * - PURPIE_API_SECRET
+     - YOUR_API_SECRET
+     - Secret for access API directly with PURPIE_API_KEY
+   * - RTMP_INGRESS_URL
+     - ingress.yourrtmp.com
+     - The RTMP server Purpie pushes your streams to.
+   * - RTMP_EGRESS_URL
+     - egress.yourrtmp.com
+     - The RTMP server Purpie pulls steams from to display.
      
-+------------------------+------------------------+-----------------------------------------------------------+
-| Variable               | Example                | Explanation                                               |
-+========================+========================+===========================================================+
-| HOST                   | purpie.io              | Simply the link from which you serve purpie.              |
-+------------------------+------------------------+-----------------------------------------------------------+
-| REACT_APP_SERVER_HOST  | http://purpie.io:8000  | The URL you serve Purpie backend from, including the port.|
-+------------------------+------------------------+-----------------------------------------------------------+
-| REACT_APP_CLIENT_HOST  | http://purpie.io:3000  | The URL you serve Purpie frontend from, including the port.|
-+--------------------------+------------------------+-----------------------------------------------------------+
-| REACT_APP_STREAMING_URL  | https://egress.purpie.io:1980/hls | The URL where your RTMP server serves the HLS files.|
-+--------------------------+------------------------+-----------------------------------------------------------+
-
-
-
+     
+     
 Creating Postgres Database
 ========================
 
