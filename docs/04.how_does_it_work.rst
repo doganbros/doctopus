@@ -15,3 +15,13 @@ Purpie is an orchestrator which provides effective and robust integration with v
 
 * Cloud-storage for:
  * On demand video delivery
+
+
+***************************************
+Architecture
+***************************************
+
+.. image:: images/purpie_system_architecture.png
+  :width: 400
+  :alt: Octopus System Architecture
+  :align: center
