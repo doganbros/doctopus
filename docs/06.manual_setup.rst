@@ -142,7 +142,7 @@ Integrating Jitsi with Purpie
 
 .. code-block:: bash
 
-  cp ./external/prosody-modules/mod_octopus.lua /usr/share/jitsi-meet/prosody-plugins
+  cp ./external/prosody-modules/mod_purpie.lua /usr/share/jitsi-meet/prosody-plugins
 
 Configuring Prosody
 -------------------
@@ -151,11 +151,11 @@ Configuring Prosody
 
 .. code-block:: lua
 
-  octopusApiKey = "yourAPIkey";
-  octopusApiSecret =  "yourAPIsecret";
-  octopusAPIBaseUrl = "https://your.baseAPI.url";
+  purpieApiKey = "yourAPIkey";
+  purpieApiSecret =  "yourAPIsecret";
+  purpieAPIBaseUrl = "https://your.baseAPI.url";
   
-* In the same file, add octopus to the list of enabled modules of the conference component like below;
+* In the same file, add purpie to the list of enabled modules of the conference component like below;
 
 .. code-block:: lua
 
@@ -166,7 +166,7 @@ Configuring Prosody
           "muc_meeting_id";
           "muc_domain_mapper";
           "polls";
-          "octopus";
+          "purpie";
           "token_verification";
       }
       admins = { "focus@auth.meet.doganbros.com" }
@@ -181,7 +181,7 @@ To install Jibri you can follow `this tutorial <https://community.jitsi.org/t/tu
 Customizing the Finalize Script
 --------------------------------
 
-* Find the following in your ``/etc/jitsi/jibri/jibri.conf`` file, and replace path with ``/srv/finalize/octopus-finalize.sh``
+* Find the following in your ``/etc/jitsi/jibri/jibri.conf`` file, and replace path with ``/srv/finalize/purpie-finalize.sh``
 
 .. code-block:: lua
 
@@ -195,9 +195,9 @@ Customizing the Finalize Script
 
 .. code-block:: bash
 
-  cp {./external/jibri/octopus-finalize.conf, octopus-finalize.sh} /srv/finalize
+  cp {./external/jibri/purpie-finalize.conf, purpie-finalize.sh} /srv/finalize
 
-* Edit ``/srv/finalize/octopus-finalize.conf`` accordingly, and restart Jibri.
+* Edit ``/srv/finalize/purpie-finalize.conf`` accordingly, and restart Jibri.
 
 .. code-block:: bash
   systemctl restart jibri
@@ -211,16 +211,16 @@ For Purpie, you will need at least one ingress server, and as many additional eg
 Integrating the RTMP server with Purpie
 =====================================
 
-* Head into the RTMP server, and use the following to copy the required scripts. ``sample-nginx.conf`` contains a working example for an RTMP server, who calls upon ``octopus.sh`` in its workflow. ``octopus.sh`` is the script that maintains the integration between the RTMP server and Purpie. ``octopus-sh.conf`` contains customizable variables for the script.
+* Head into the RTMP server, and use the following to copy the required scripts. ``sample-nginx.conf`` contains a working example for an RTMP server, who calls upon ``purpie.sh`` in its workflow. ``purpie.sh`` is the script that maintains the integration between the RTMP server and Purpie. ``purpie-sh.conf`` contains customizable variables for the script.
 
 .. code-block:: bash
 
   mkdir /home/purpie
-  cp {./external/rtmp/octopus.sh, ./external/rtmp/octopus-sh.conf} /home/purpie
+  cp {./external/rtmp/purpie.sh, ./external/rtmp/purpie-sh.conf} /home/purpie
   cp ./external/rtmp/sample-nginx.conf /etc/nginx
 
 
-* Navigate to ``/home/purpie`` and edit the contents of ``octopus-sh.conf`` accordingly. Then restart nginx.
+* Navigate to ``/home/purpie`` and edit the contents of ``purpie-sh.conf`` accordingly. Then restart nginx.
 
 .. code-block:: bash
 
