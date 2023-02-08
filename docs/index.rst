@@ -42,7 +42,7 @@ If you'd like to learn more about us, you can visit our website.
    06.manual_setup.rst
    07.testing.rst
    08.road_map.rst
-   09.developer_guideline.rst
+   09.developer_guide.rst
    10.contribution.rst
    11.license.rst
 
