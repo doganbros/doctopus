@@ -19,7 +19,7 @@ You should give us as much as possible details about the problems and how to rep
 Contributor License Agreement
 *****************************
 
-The Purpie projects are licensed under the `Apache License 2.0 <https://github.com/doganbros/purpie/blob/develop/LICENSE>`_ so you need to sign our Apache-based contributor license agreement as either a corporation  or an individual to continue making these projects available under an Open Source license. If you do not accept this agreement then sadly, we cannot accept your contribution.
+The Purpie projects are licensed under the `Apache License 2.0 <https://github.com/doganbros/purpie/blob/develop/LICENSE>`_ so you need to sign our Apache-based contributor license agreement as either a corporation  or an individual to continue making these projects available under an Open Source license. **If you do not accept this agreement then sadly, we cannot accept your contribution.**
 
 * If you are a corporation, please sign the form `here. <https://powerforms.docusign.net/8a01cd33-4e62-49bd-912a-703760df769a?env=na4&acct=247e2141-0ba7-4f55-934a-a81d35370124&accountId=247e2141-0ba7-4f55-934a-a81d35370124>`_ 
  
