@@ -2,208 +2,57 @@
 Contribution
 #########################
 
-This document focuses on style-guide.
-It is a kind of coding standards applied to documentation files.
-It is not about documentation content.
+*******************************
+How do you contribute to Purpie
+*******************************
+
+We would very much like your request to improve Purpie so please read and follow this contributions manual before you start working.
 
 
-***************************************
-RestructuredText with Sphinx directives
-***************************************
+************************
+Create and Report Issues
+************************
 
-This documentation uses `Python-sphinx`_, which itself uses `reStructuredText`_
-syntax.
+You should give us as much as possible details about the problems and how to reproduce these issues. Also, give us more detail about version of the Purpie you are using and development environment.
 
+*****************************
+Contributor License Agreement
+*****************************
 
-*********
-Filenames
-*********
+The Purpie projects are licensed under the `Apache License 2.0 <https://github.com/doganbros/purpie/blob/develop/LICENSE>`_ so you need to sign our Apache-based contributor license agreement as either a `corporation <https://powerforms.docusign.net/8a01cd33-4e62-49bd-912a-703760df769a?env=na4&acct=247e2141-0ba7-4f55-934a-a81d35370124&accountId=247e2141-0ba7-4f55-934a-a81d35370124>`_ or an `individual <https://powerforms.docusign.net/25f9e86f-c3ed-4046-a84c-ea47d044ddfa?env=na4&acct=247e2141-0ba7-4f55-934a-a81d35370124&accountId=247e2141-0ba7-4f55-934a-a81d35370124>`_ to continue making these projects available under an Open Source license. If you do not accept this agreement then sadly, we cannot accept your contribution.
 
-Use only lowercase alphanumeric characters and ``-`` (minus) symbol.
+*********************
+Pull Request Strategy
+*********************
 
-Suffix filenames with the ``.txt`` extension.
+* Make sure your code passes the linter rules that are executing automatically when creating pull request.
+* Purpie is a monorepo project so perform only frontend or backend change with one logical operation per pull request.
+* Cleanly message your commits, squash them if necessary.
+* Rebase your working branch on top of the develop branch before starting the coding.
 
-.. note::
+************
+Coding style
+************
 
-  Usage of ``.rst`` extension is not recommended because:
+Comments
+========
 
-  * RST files are human-readable text files. Most systems natively recognize
-    the ``.txt`` extension and open these files with a text editor. This is
-    a good choice.
+* Comments documenting the source code are required.
+* Comments should be formatted as proper English sentences.
 
-  * Some programs parse ``.rst`` with `rst2html`_, which cannot interpret some
-    Sphinx's directives such as ``code-block``. So readers using such programs
-    actually lose some content.
-
-    As an example, well known `Github`_ platform uses rst2html
-    to render ``.rst`` files in its repository browser. Not only you lose
-    content, you also lose features like links to lines.
-
-  * When you need to read HTML builds of the documentation, best practice is to
-    export documentation as static builds with ``sphinx-build`` command, then
-    host and serve these builds as static files. For public projects, you may
-    have a look at services like `Read the docs`_.
-
-
-***********
-Whitespaces
-***********
-
-Indentation
+Duplication
 ===========
 
-Indent with 2 spaces.
+* Copy-paste source code is not allowed, you can reuse it.
 
-Except:
+Formatting
+==========
 
-* ``toctree`` directive requires a 3 spaces indentation.
+* There are some prettier packages with eslint in the codebase, so you need to adjust your editor with Purpie settings.
 
-Blank lines
-===========
+Naming
+======
 
-Two blank lines before overlined sections, i.e. before H1 and H2.
-One blank line before other sections.
-See `Headings`_ for an example.
+* Util function names camelCase, file names kebab-case and react file and component names PascalCase format in the Purpie.
 
-One blank line to separate directives.
-
-.. code-block:: rst
-
-  Some text before.
-
-  .. note::
-
-    Some note.
-
-Exception: directives can be written without blank lines if they are only one
-line long.
-
-.. code-block:: rst
-
-  .. note:: A short note.
-
-
-***********
-Line length
-***********
-
-Limit all lines to a maximum of 79 characters.
-
-
-********
-Headings
-********
-
-Use the following symbols to create headings:
-
-#. ``#`` with overline
-#. ``*`` with overline
-#. ``=``
-#. ``-``
-#. ``^``
-#. ``"``
-
-As an example:
-
-.. code-block:: rst
-
-  ##################
-  H1: document title
-  ##################
-
-  Introduction text.
-
-
-  *********
-  Sample H2
-  *********
-
-  Sample content.
-
-
-  **********
-  Another H2
-  **********
-
-  Sample H3
-  =========
-
-  Sample H4
-  ---------
-
-  Sample H5
-  ^^^^^^^^^
-
-  Sample H6
-  """""""""
-
-  And some text.
-
-If you need more than heading level 4 (i.e. H5 or H6), then you should consider
-creating a new document.
-
-There should be only one H1 in a document.
-
-.. note::
-
-  See also `Sphinx's documentation about sections`_.
-
-
-***********
-Code blocks
-***********
-
-Use the ``code-block`` directive **and** specify the programming language. As
-an example:
-
-.. code-block:: rst
-
-  .. code-block:: python
-
-    import this
-
-
-********************
-Links and references
-********************
-
-Use links and references footnotes with the ``target-notes`` directive.
-As an example:
-
-.. code-block:: rst
-
-  #############
-  Some document
-  #############
-
-  Some text which includes links to `Example website`_ and many other links.
-
-  `Example website`_ can be referenced multiple times.
-
-  (... document content...)
-
-  And at the end of the document...
-
-  **********
-  References
-  **********
-
-  .. target-notes::
-
-  .. _`Example website`: http://www.example.com/
-
-
-**********
-References
-**********
-
-.. target-notes::
-
-.. _`Python-sphinx`: http://sphinx.pocoo.org/
-.. _`reStructuredText`: http://docutils.sourceforge.net/rst.html
-.. _`rst2html`:
-   http://docutils.sourceforge.net/docs/user/tools.html#rst2html-py
-.. _`Github`: https://github.com
-.. _`Read the docs`: http://readthedocs.org
-.. _`Sphinx's documentation about sections`:
-   http://sphinx.pocoo.org/rest.html#sections
+* The names of global constants (including ES6 module-global constants) should be written in uppercase with underscores to separate words. For example, ``BACKGROUND_COLOR``.

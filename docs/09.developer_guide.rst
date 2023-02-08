@@ -1,5 +1,5 @@
 #########################
-Developer Guideline
+Developer Guide
 #########################
 
 This document focuses frontend and backend development of Purpie project.
