@@ -331,6 +331,10 @@ library that helps in binding redux to react. ``redux-thunk`` provides
 the redux middleware that helps the app to deal with asynchronous
 dispatches in redux actions.
 
+`React-i18next <https://react.i18next.com//>`__ 🏠
+
+``React-i18next`` is a powerful internationalization framework for React / React Native which is based on i18next. Our goal is to support as many languages as possible with the help of this framework and community.
+
 Development Dependencies
 ------------------------
 
@@ -357,6 +361,8 @@ app.
 
 Jest is a delightful JavaScript Testing Framework with a focus on
 simplicity.
+
+
 
 .. _nestjs-1:
 
