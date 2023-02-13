@@ -633,6 +633,8 @@ Application Structure
    │   │   ├── layouts
    │   │   └── utils
    │   ├── config
+           ├──i18n
+           │   └── [language].json
    │   │   ├── app-config.ts
    │   │   └── http.ts
    │   ├── helpers
