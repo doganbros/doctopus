@@ -204,7 +204,10 @@ Glossary
 ========
 
 -  🏠 represents client side
--  🖥️ represents server side # Architecture
+-  🖥️ represents server side 
+
+Architecture
+------------
 
 This is a single page web application, that is it handles routing at the
 client-side without the need to refresh the entire page. All http
@@ -270,13 +273,17 @@ SendGrid is the main service used for sending emails.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Allows use of decorator and non-decorator based validation. Internally
-uses validator.js to perform validation. ###
+uses validator.js to perform validation.
+
 `Axios <https://axios-http.com/>`__ 🏠🖥️
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ``Axios`` is a promise based HTTP client used in this app. All AJAX
 requests are handled with ``axios``. Their interceptors really help to
-avoid redundancy in most part of the app. ###
+avoid redundancy in most part of the app.
+
 `SCSS <https://sass-lang.com/>`__ 🏠
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This app uses no ``CSS`` (Although it compiles to css in the long run).
 ``SCSS`` is rearely used in this app. It is used to style a large
@@ -284,7 +291,7 @@ portion of the app. ``SCSS Modules`` is recommended if ``SCSS`` is used.
 ``node-sass`` is the library responsible for compiling the app’s
 ``scss`` to ``css``
 
-`React 17 <https://reactjs.org/>`__ 🏠
+`React <https://reactjs.org/>`__ 🏠
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This app uses the latest version of ``React`` Framework (Library) in
@@ -655,10 +662,6 @@ Application Structure
 
    This is the main readme file of the application
 
--  ``SOFTWARE-SPEC.md``
-
-   This is the current document you are viewing
-
 -  ``package-lock.json``
 
    This is automatically generated for any operations where npm modifies
@@ -966,5 +969,3 @@ Application Structure
 
       file contains scripts files calls for ci cd auto deployment into
       aws instance
-
-
