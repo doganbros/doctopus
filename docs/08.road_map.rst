@@ -27,6 +27,7 @@ Road Map
 * Open API
 * Streaming Studio App
 * Purpie Mobile (Alpha Release)
+* Multi-language Support
 
 *********
 2023, Q4
