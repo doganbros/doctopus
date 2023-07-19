@@ -1,4 +1,8 @@
-#########################
+.. meta::
+    :description lang=en:
+        Discover Purpie: An Open Source Social Media Solution for Video-Oriented Communication and Content Sharing. Explore its Unique 
+        Features, Resourceful Integration Capabilities, and Flexible Zones for Varied Use Cases. Experience the Elegance of Purpie's Look 
+        and Feel.
 What is Purpie?
 #########################
 
