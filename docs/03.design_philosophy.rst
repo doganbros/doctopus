@@ -1,3 +1,6 @@
+.. meta::
+    :description lang=en:
+        Purpie's Hierarchical Content Management Architecture: Zones, Channels, and Profiles. Understand the Concepts Behind Zones as Bases for Channels, Public vs. Private Zones, and Zone Membership. Learn About Channels for Content Sharing, Public and Private Channels, and Ownership Permissions. Explore Profiles for Personalized Content Sharing with Contacts. A Versatile Design Philosophy Catering to Diverse User Needs.
 #########################
 Design Philosophy
 #########################
