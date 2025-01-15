@@ -26,7 +26,7 @@ Road Map
 
 * Open API
 * Streaming Studio App
-* Purpie Mobile (Alpha Release)
+* Pavilion Mobile (Alpha Release)
 * Multi-language Support
 
 *********
@@ -34,4 +34,4 @@ Road Map
 *********
 
 * Beta Release
-* Purpie Mobile (Beta Release)
+* Pavilion Mobile (Beta Release)
