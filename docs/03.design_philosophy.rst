@@ -1,11 +1,11 @@
 .. meta::
     :description lang=en:
-        Purpie's Hierarchical Content Management Architecture: Zones, Channels, and Profiles. Understand the Concepts Behind Zones as Bases for Channels, Public vs. Private Zones, and Zone Membership. Learn About Channels for Content Sharing, Public and Private Channels, and Ownership Permissions. Explore Profiles for Personalized Content Sharing with Contacts. A Versatile Design Philosophy Catering to Diverse User Needs.
+        Pavilion's Hierarchical Content Management Architecture: Zones, Channels, and Profiles. Understand the Concepts Behind Zones as Bases for Channels, Public vs. Private Zones, and Zone Membership. Learn About Channels for Content Sharing, Public and Private Channels, and Ownership Permissions. Explore Profiles for Personalized Content Sharing with Contacts. A Versatile Design Philosophy Catering to Diverse User Needs.
 #########################
 Design Philosophy
 #########################
 
-Purpie has hierarchical content management architecture which lies behind Zones and Channels. Like in any membership based solutions, users have their own profile. Adding to this, in Purpie, any user can create multiple Zones and multiple channels in each Zone.
+Pavilion has hierarchical content management architecture which lies behind Zones and Channels. Like in any membership based solutions, users have their own profile. Adding to this, in Pavilion, any user can create multiple Zones and multiple channels in each Zone.
 
 What is a Zone?
 ================
@@ -16,8 +16,8 @@ Following key points should be in consideration while interacting with Zones:
 * Zones can be private or public.
 * Users can not share content directly from a Zone.
 * Private Zones can only be accessed by the Zone members.
-* Public Zones are open to other Purpie users.
-* Users can join existing public Zones in Purpie and join Private Zones only through invites.
+* Public Zones are open to other Pavilion users.
+* Users can join existing public Zones in Pavilion and join Private Zones only through invites.
 * A user can create a Channel inside a Zone if they are the Zone owner or if given a role that has permissions to create Channels by the Zone owner.
 
 What is a Channel?
@@ -30,17 +30,17 @@ Following key points should be in consideration while interacting with Channels:
 * Channels can be private or public. 
 * Users can share content from a Channel (also from their Profile but we will come to that later). 
 * Private Channels can only be accessed by the Channel followers.
-* Public Channels are open to other Purpie users.
+* Public Channels are open to other Pavilion users.
 * Users can follow existing public Channels and join private Channels only through invites.
 * Users can create content inside a Channel only if they are the Channel owner or if given a role that has permissions to create content by the Channel owner.
 
 What is a Profile?
 ==================
 
-By default, each user has a profile in Purpie, like it is such in any site having membership functionality Users can add others into their Contacts, which are the only ones who can see the content they publish through their profile. Profiles are very handy if a user does not want to create a Zone or Channel but just wants to share a video content with the people they may know.
+By default, each user has a profile in Pavilion, like it is such in any site having membership functionality Users can add others into their Contacts, which are the only ones who can see the content they publish through their profile. Profiles are very handy if a user does not want to create a Zone or Channel but just wants to share a video content with the people they may know.
 
 Following key points should be in consideration while interacting with Profiles:
 
 * Users can share content from their Profiles only with their Contacts. 
 * Each user can have a single Profile. 
-* Users can request to add any other Purpie user to their Contacts.
+* Users can request to add any other Pavilion user to their Contacts.
