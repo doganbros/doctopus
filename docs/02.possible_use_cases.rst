@@ -1,11 +1,11 @@
 .. meta::
     :description lang=en:
-        Explore the Versatility of Purpie: Ideal for Diverse Video-Based Social Media Needs. Discover Use Cases Ranging from Social Media Platforms for Businesses, Local Authorities, and Religious Groups to Gaming & Entertainment Streams, Monetizing Video Content, Online Auctions, Business Matchmaking, and More.
+        Explore the Versatility of Pavilion: Ideal for Diverse Video-Based Social Media Needs. Discover Use Cases Ranging from Social Media Platforms for Businesses, Local Authorities, and Religious Groups to Gaming & Entertainment Streams, Monetizing Video Content, Online Auctions, Business Matchmaking, and More.
 #########################
 Possible Use Cases
 #########################
 
-Purpie can be used as is or customised for any kind of video based social media needs.
+Pavilion can be used as is or customised for any kind of video based social media needs.
 
 Here are some possible use cases:
 
