@@ -1,11 +1,11 @@
 .. meta::
     :description lang=en:
-        Purpie: An Effective Orchestrator for Seamless Media Service Integration. Discover the Integration with Jitsi for Online Meetings, Webinars, and Streaming, Nginx RTMP Servers for Live and On-Demand Streaming, and Cloud Storage for Video Delivery. Explore the Purpie System Architecture, Powering Purpie's Robust Functionality.
+        Pavilion: An Effective Orchestrator for Seamless Media Service Integration. Discover the Integration with Jitsi for Online Meetings, Webinars, and Streaming, Nginx RTMP Servers for Live and On-Demand Streaming, and Cloud Storage for Video Delivery. Explore the Pavilion System Architecture, Powering Pavilion's Robust Functionality.
 #################
 How Does It Work?
 #################
 
-Purpie is an orchestrator which provides effective and robust integration with various media services. Purpie ties up following media solutions and services:
+Pavilion is an orchestrator which provides effective and robust integration with various media services. Pavilion ties up following media solutions and services:
 
 * Jitsi for:
  * Online meetings
