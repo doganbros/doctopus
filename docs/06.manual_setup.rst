@@ -5,7 +5,7 @@ Setup from Scratch
 Manual Setup installs each component individually to maximize control and configurability. All components can be installed into a single machine, provided the machine has an FQDN, and is strong enough to meet the requirements. Please make sure the certificate for the domain includes not only the domain itself, but all its belonging subdomains as well. You may ensure it by using a wildcard like "*.mydomain.com" when procuring the certificate.
 
 ******************
-Setting Up Purpie
+Setting Up Pavilion
 ******************
 
 Requirements
@@ -25,8 +25,8 @@ Getting Started
 
 .. code-block:: bash
 
-  git clone https://github.com/doganbros/purpie # Clone Repository
-  cd purpie
+  git clone https://github.com/doganbros/pavilion # Clone Repository
+  cd pavilion
 
 Install dependencies with
 
@@ -61,7 +61,7 @@ You may configure the environment by making a copy of the boilerplate provided. 
      - 3000
      - The port the frontend serves from.
    * - HOST
-     - purpie.io
+     - pavilion.io
      - Host address for backend and frontend.
    * - PURPIE_API_KEY
      - YOUR_API_KEY
@@ -71,27 +71,27 @@ You may configure the environment by making a copy of the boilerplate provided. 
      - Secret for access API directly with PURPIE_API_KEY
    * - RTMP_INGRESS_URL
      - ingress.yourrtmp.com
-     - The RTMP server Purpie pushes your streams to.
+     - The RTMP server Pavilion pushes your streams to.
    * - RTMP_EGRESS_URL
      - egress.yourrtmp.com
-     - The RTMP server Purpie pulls steams from to display.
+     - The RTMP server Pavilion pulls steams from to display.
      
      
      
 Creating Postgres Database
 ========================
 
-Please follow the steps below to get a development Postgres server running. The easiest way to use `docker <https://www.docker.com/>`_. If you have running Postgres database server you can skip these steps and simply create an Purpie database.
+Please follow the steps below to get a development Postgres server running. The easiest way to use `docker <https://www.docker.com/>`_. If you have running Postgres database server you can skip these steps and simply create an Pavilion database.
 
 * Make sure you have docker installed on your computer. If you do not have docker already on your computer, Go to `this link <https://www.docker.com/get-started/>`_, choose your platform and click download. Follow the simple steps to get docker installed on your computer.
 
 * Open your terminal (command prompt or preferably powershell on windows).
 
-* Enter the command ``docker run --name purpie-dev -e POSTGRES_PASSWORD=$YOUR_POSTGRES_PASSWORD -p 5432:5432 -d postgres``. Postgres docker image will be downloaded and Postgres Docker container with the name purpie-dev will up and serve from port 5432 after this command.
+* Enter the command ``docker run --name pavilion-dev -e POSTGRES_PASSWORD=$YOUR_POSTGRES_PASSWORD -p 5432:5432 -d postgres``. Postgres docker image will be downloaded and Postgres Docker container with the name pavilion-dev will up and serve from port 5432 after this command.
 
-* Run ``docker exec -it purpie-dev psql -U postgres`` to connect your Postgres database.
+* Run ``docker exec -it pavilion-dev psql -U postgres`` to connect your Postgres database.
 
-* Inside the docker container, run ``CREATE DATABASE 'purpie';`` to create your Purpie database.
+* Inside the docker container, run ``CREATE DATABASE 'pavilion';`` to create your Pavilion database.
 
 * Run ``\q`` to quit from Psql and Docker container.
 
@@ -99,7 +99,7 @@ Please follow the steps below to get a development Postgres server running. The 
 
 
 ***************************************
-Running Purpie
+Running Pavilion
 ***************************************
  
 .. code-block:: bash
@@ -108,7 +108,7 @@ Running Purpie
   yarn start:server # Runs backend in production
   yarn start:web # Runs frontend side
   
-You may refer to this `sample NGINX config <https://github.com/doganbros/purpie/tree/master/external/nginx>`_ to set up your Purpie web server.
+You may refer to this `sample NGINX config <https://github.com/doganbros/pavilion/tree/master/external/nginx>`_ to set up your Pavilion web server.
   
 ****************
 Setting up Jitsi
@@ -117,16 +117,16 @@ Setting up Jitsi
 Installing Jitsi with JWT support
 =================================
 
-Purpie mmakes use of Jitsi for video streaming and live meeting purposes. It requires a Jitsi installation with JWT token support. You can refer to `this document <https://doganbros.com/index.php/jitsi/jitsi-installation-with-jwt-support-on-ubuntu-18-04-lts/>`_ by us to install Jitsi. Remember to update the ``.env`` variable by setting ``JWT_APP_ID``'s value to ``YOUR_APP_ID``, ``JITSI_SECRET`` to ``YOUR_SECRET`` and ``JITSI_DOMAIN`` to the domain where you set up jitsi.
+Pavilion mmakes use of Jitsi for video streaming and live meeting purposes. It requires a Jitsi installation with JWT token support. You can refer to `this document <https://doganbros.com/index.php/jitsi/jitsi-installation-with-jwt-support-on-ubuntu-18-04-lts/>`_ by us to install Jitsi. Remember to update the ``.env`` variable by setting ``JWT_APP_ID``'s value to ``YOUR_APP_ID``, ``JITSI_SECRET`` to ``YOUR_SECRET`` and ``JITSI_DOMAIN`` to the domain where you set up jitsi.
 
-Installing Purpie Jitsi Module
+Installing Pavilion Jitsi Module
 ------------------------------
 This module is a React Module that applies on top of Jitsi to provide visual and functional differentiations. To avoid issues regarding version mismatch, start with the customized Jitsi repo below;
 
 .. code-block:: bash
 
-  git clone https://github.com/doganbros/purpie-jitsi-meet.git
-  cd purpie-jitsi-meet
+  git clone https://github.com/doganbros/pavilion-jitsi-meet.git
+  cd pavilion-jitsi-meet
   
 The module is included in the package.json file within the repository. Therefore, you are able to simply follow the promtps as shown;
 
@@ -138,14 +138,14 @@ The module is included in the package.json file within the repository. Therefore
 
 At this point, your customized Jitsi is built and ready to serve. Make sure to edit the NGINX configuration accordingly to make use of your new directory.
 
-Integrating Jitsi with Purpie
+Integrating Jitsi with Pavilion
 =================================
 
-* This .lua module for Jitsi Meet manages the integration between purpie and Jitsi. It enables Jitsi to send reports to Purpie. To enable it, follow the instructions below.
+* This .lua module for Jitsi Meet manages the integration between pavilion and Jitsi. It enables Jitsi to send reports to Pavilion. To enable it, follow the instructions below.
 
 .. code-block:: bash
 
-  cp ./external/prosody-modules/mod_purpie.lua /usr/share/jitsi-meet/prosody-plugins
+  cp ./external/prosody-modules/mod_pavilion.lua /usr/share/jitsi-meet/prosody-plugins
 
 Configuring Prosody
 -------------------
@@ -154,11 +154,11 @@ Configuring Prosody
 
 .. code-block:: lua
 
-  purpieApiKey = "yourAPIkey";
-  purpieApiSecret =  "yourAPIsecret";
-  purpieAPIBaseUrl = "https://your.baseAPI.url";
+  pavilionApiKey = "yourAPIkey";
+  pavilionApiSecret =  "yourAPIsecret";
+  pavilionAPIBaseUrl = "https://your.baseAPI.url";
   
-* In the same file, add purpie to the list of enabled modules of the conference component like below;
+* In the same file, add pavilion to the list of enabled modules of the conference component like below;
 
 .. code-block:: lua
 
@@ -169,7 +169,7 @@ Configuring Prosody
           "muc_meeting_id";
           "muc_domain_mapper";
           "polls";
-          "purpie";
+          "pavilion";
           "token_verification";
       }
       admins = { "focus@auth.meet.doganbros.com" }
@@ -184,7 +184,7 @@ To install Jibri you can follow `this tutorial <https://community.jitsi.org/t/tu
 Customizing the Finalize Script
 --------------------------------
 
-* Find the following in your ``/etc/jitsi/jibri/jibri.conf`` file, and replace path with ``/srv/finalize/purpie-finalize.sh``
+* Find the following in your ``/etc/jitsi/jibri/jibri.conf`` file, and replace path with ``/srv/finalize/pavilion-finalize.sh``
 
 .. code-block:: lua
 
@@ -194,13 +194,13 @@ Customizing the Finalize Script
       }
   }
 
-* Copy the included finalize.sh file to your finalize script directory. This .sh file runs upon the completion of recording, and both uploads the recorded file to an S3 bucket, and manages Jibri's integration with Purpie.
+* Copy the included finalize.sh file to your finalize script directory. This .sh file runs upon the completion of recording, and both uploads the recorded file to an S3 bucket, and manages Jibri's integration with Pavilion.
 
 .. code-block:: bash
 
-  cp {./external/jibri/purpie-finalize.conf, purpie-finalize.sh} /srv/finalize
+  cp {./external/jibri/pavilion-finalize.conf, pavilion-finalize.sh} /srv/finalize
 
-* Edit ``/srv/finalize/purpie-finalize.conf`` accordingly, and restart Jibri.
+* Edit ``/srv/finalize/pavilion-finalize.conf`` accordingly, and restart Jibri.
 
 .. code-block:: bash
   systemctl restart jibri
@@ -209,21 +209,21 @@ Customizing the Finalize Script
 Setting up the Ingress RTMP servers
 ***************************************
 
-For Purpie, you will need at least one ingress server, and as many additional egress servers as you need for ease of autoscalability. To install NGINX rtmp server, you can follow the guide in `this page <https://docs.nginx.com/nginx/admin-guide/dynamic-modules/rtmp/>`_. Remember to update the ``RTMP_INGRESS_URL`` and ``RTMP_EGRESS_URL`` .env variables to your ingress and egress server url respectively.
+For Pavilion, you will need at least one ingress server, and as many additional egress servers as you need for ease of autoscalability. To install NGINX rtmp server, you can follow the guide in `this page <https://docs.nginx.com/nginx/admin-guide/dynamic-modules/rtmp/>`_. Remember to update the ``RTMP_INGRESS_URL`` and ``RTMP_EGRESS_URL`` .env variables to your ingress and egress server url respectively.
 
-Integrating the RTMP server with Purpie
+Integrating the RTMP server with Pavilion
 =====================================
 
-* Head into the RTMP server, and use the following to copy the required scripts. ``sample-nginx.conf`` contains a working example for an RTMP server, who calls upon ``purpie.sh`` in its workflow. ``purpie.sh`` is the script that maintains the integration between the RTMP server and Purpie. ``purpie-sh.conf`` contains customizable variables for the script.
+* Head into the RTMP server, and use the following to copy the required scripts. ``sample-nginx.conf`` contains a working example for an RTMP server, who calls upon ``pavilion.sh`` in its workflow. ``pavilion.sh`` is the script that maintains the integration between the RTMP server and Pavilion. ``pavilion-sh.conf`` contains customizable variables for the script.
 
 .. code-block:: bash
 
-  mkdir /home/purpie
-  cp {./external/rtmp/purpie.sh, ./external/rtmp/purpie-sh.conf} /home/purpie
+  mkdir /home/pavilion
+  cp {./external/rtmp/pavilion.sh, ./external/rtmp/pavilion-sh.conf} /home/pavilion
   cp ./external/rtmp/sample-nginx.conf /etc/nginx
 
 
-* Navigate to ``/home/purpie`` and edit the contents of ``purpie-sh.conf`` accordingly. Then restart nginx.
+* Navigate to ``/home/pavilion`` and edit the contents of ``pavilion-sh.conf`` accordingly. Then restart nginx.
 
 .. code-block:: bash
 
